@@ -191,7 +191,7 @@ body {
 #map-flag {
   position: absolute;
   font-size: 24px;
-  transform: translate(-50%, -100%); /* Centers the bottom point of the emoji */
+  transform: translate(-50%, -100%);
   pointer-events: none;
   filter: drop-shadow(2px 2px 2px rgba(0,0,0,0.8));
 }
