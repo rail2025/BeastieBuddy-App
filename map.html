@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zone Map</title>
+    <link rel="stylesheet" href="/src/styles.css" />
+    <script type="module" src="/src/map.ts" defer></script>
+  </head>
+  <body id="map-body">
+    <div id="map-view">
+      <header id="map-titlebar" data-tauri-drag-region>
+        <div class="title drag-region" data-tauri-drag-region>Zone Map</div>
+        <div class="window-controls">
+          <span id="btn-pin" title="Always on Top">📌</span>
+          <span id="btn-shade" title="Roll Up/Down">▼</span>
+          <span id="btn-close" title="Close">✕</span>
+        </div>
+      </header>
+      <div class="map-wrapper">
+        <img src="" alt="Map" id="zone-map-img" />
+        <div id="map-flag">🚩</div>
+      </div>
+    </div>
+  </body>
+</html>
