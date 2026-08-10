@@ -20,10 +20,6 @@ if (isPinned) {
     btnPin.style.opacity = '1';
 }
 
-// ---------------------------------------------------------
-// Flag positioning
-// ---------------------------------------------------------
-
 function updateFlag(x: number, y: number) {
     const leftPct = ((x - 1) / 40) * 100;
     const topPct = ((y - 1) / 40) * 100;
@@ -31,10 +27,6 @@ function updateFlag(x: number, y: number) {
     flag.style.left = `${leftPct}%`;
     flag.style.top = `${topPct}%`;
 }
-
-// ---------------------------------------------------------
-// Map loading
-// ---------------------------------------------------------
 
 async function loadMap(zoneName: string) {
     try {
@@ -51,15 +43,8 @@ async function loadMap(zoneName: string) {
             `&query=${encodeURIComponent(query)}` +
             `&limit=5`;
 
-        console.log('[Map] Territory search:', searchUrl);
-
         const searchResponse = await fetch(searchUrl);
         const searchText = await searchResponse.text();
-
-        console.log(
-            '[Map] Territory search status:',
-            searchResponse.status
-        );
 
         if (!searchResponse.ok) {
             throw new Error(
@@ -81,27 +66,12 @@ async function loadMap(zoneName: string) {
         const territory = searchData.results[0];
         const territoryId = territory.row_id;
 
-        console.log(
-            '[Map] TerritoryType ID:',
-            territoryId
-        );
-
         // Get the complete TerritoryType row.
         const territoryUrl =
             `https://v2.xivapi.com/api/sheet/TerritoryType/${territoryId}`;
 
-        console.log(
-            '[Map] Territory request:',
-            territoryUrl
-        );
-
         const territoryResponse = await fetch(territoryUrl);
         const territoryText = await territoryResponse.text();
-
-        console.log(
-            '[Map] Territory status:',
-            territoryResponse.status
-        );
 
         if (!territoryResponse.ok) {
             throw new Error(
@@ -110,11 +80,6 @@ async function loadMap(zoneName: string) {
         }
 
         const territoryData = JSON.parse(territoryText);
-
-        console.log(
-            '[Map] Territory data:',
-            territoryData
-        );
 
         // Extract Map row ID.
         const mapReference =
@@ -148,19 +113,9 @@ async function loadMap(zoneName: string) {
             );
         }
 
-        console.log(
-            '[Map] Map row ID:',
-            mapId
-        );
-
         // Get Map row.
         const mapUrl =
             `https://v2.xivapi.com/api/sheet/Map/${mapId}`;
-
-        console.log(
-            '[Map] Map request:',
-            mapUrl
-        );
 
         const mapResponse = await fetch(mapUrl);
         const mapText = await mapResponse.text();
@@ -178,12 +133,7 @@ async function loadMap(zoneName: string) {
 
         const mapData = JSON.parse(mapText);
 
-        console.log(
-            '[Map] Map data:',
-            mapData
-        );
-
-        // Map.Id is the asset ID, e.g. "w1f3" or "s1f1/00".
+        // Map.Id is the asset ID
         const mapAssetId =
             mapData.fields?.Id ??
             mapData.fields?.ID ??
@@ -198,19 +148,9 @@ async function loadMap(zoneName: string) {
             );
         }
 
-        console.log(
-            '[Map] Map asset ID:',
-            mapAssetId
-        );
-
         // XIVAPI v2 map asset endpoint.
         const imageUrl =
             `https://v2.xivapi.com/api/asset/map/${mapAssetId}`;
-
-        console.log(
-            '[Map] Image URL:',
-            imageUrl
-        );
 
         mapImg.onload = () => {
             console.log(
@@ -235,10 +175,6 @@ async function loadMap(zoneName: string) {
     }
 }
 
-// ---------------------------------------------------------
-// Initial map
-// ---------------------------------------------------------
-
 const initialZone = urlParams.get('zone') ?? '';
 const initialX = parseFloat(urlParams.get('x') || '1');
 const initialY = parseFloat(urlParams.get('y') || '1');
@@ -248,10 +184,6 @@ updateFlag(initialX, initialY);
 if (initialZone) {
     loadMap(initialZone);
 }
-
-// ---------------------------------------------------------
-// Receive updates from the search window
-// ---------------------------------------------------------
 
 listen<{
     x: number;
@@ -267,11 +199,6 @@ listen<{
         pinned,
         opacity
     } = event.payload;
-
-    console.log(
-        '[Map] Received update:',
-        event.payload
-    );
 
     // Move flag.
     updateFlag(x, y);
@@ -290,10 +217,6 @@ listen<{
     // Load the new zone into this same window.
     await loadMap(zone);
 });
-
-// ---------------------------------------------------------
-// Window controls
-// ---------------------------------------------------------
 
 document.getElementById('btn-close')?.addEventListener(
     'click',
@@ -315,10 +238,6 @@ btnPin?.addEventListener(
             isPinned ? '1' : '0.5';
     }
 );
-
-// ---------------------------------------------------------
-// Shade button
-// ---------------------------------------------------------
 
 btnShade?.addEventListener(
     'click',
