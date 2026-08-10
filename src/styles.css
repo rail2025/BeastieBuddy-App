@@ -1,0 +1,197 @@
+:root {
+  background-color: #111111;
+  color: #e0e0e0;
+  font-family: sans-serif;
+  font-size: 13px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: rgba(20, 20, 20, 0.95);
+}
+
+#titlebar {
+  background-color: #5b2c34;
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4px 8px;
+}
+
+.drag-region {
+  -webkit-app-region: drag;
+  user-select: none;
+  font-weight: bold;
+}
+
+.window-controls span {
+  margin-left: 12px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.window-controls {
+  -webkit-app-region: no-drag;
+}
+
+.no-results {
+  color: #888888;
+  font-style: italic;
+  padding: 8px 0;
+}
+
+#tabs {
+  display: flex;
+  background-color: #1a1a1a;
+  padding: 4px 8px 0;
+  gap: 2px;
+}
+
+#tabs button {
+  background-color: transparent;
+  color: #aaaaaa;
+  border: none;
+  padding: 6px 12px;
+  cursor: pointer;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+
+#tabs button.active {
+  background-color: #2a2a2a;
+  color: #ffffff;
+}
+
+#search-row {
+  display: flex;
+  padding: 6px 8px;
+  gap: 6px;
+  background-color: #2a2a2a;
+}
+
+#search-input {
+  flex-grow: 1;
+  background-color: #1a1a1a;
+  border: 1px solid #444444;
+  color: #ffffff;
+  padding: 4px 8px;
+  border-radius: 3px;
+}
+
+#search-row button {
+  background-color: #444444;
+  color: #ffffff;
+  border: none;
+  padding: 4px 10px;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+#results-container {
+  flex-grow: 1;
+  padding: 8px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.result-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.result-name {
+  font-weight: bold;
+}
+
+.result-loc {
+  color: #aaaaaa;
+}
+
+#status-bar {
+  padding: 4px 8px;
+  background-color: #111111;
+  color: #666666;
+  font-size: 11px;
+  border-top: 1px solid #222222;
+}
+
+#btn-shade {
+  display: inline-block;
+  transition: transform 0.2s ease;
+}
+
+#btn-shade.shaded {
+  transform: rotate(-90deg);
+}
+
+#opacity-menu {
+  position: absolute;
+  top: 30px;
+  left: 10px;
+  background-color: #2a2a2a;
+  border: 1px solid #444;
+  padding: 10px;
+  border-radius: 4px;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+#opacity-menu.hidden {
+  display: none;
+}
+
+#map-view {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: #111111;
+  display: flex;
+  flex-direction: column;
+  z-index: 1000;
+}
+
+#map-view.hidden { 
+  display: none; 
+}
+
+#map-titlebar {
+  background-color: #5b2c34;
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4px 8px;
+}
+
+.map-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1/1; 
+  background: #000;
+}
+
+#zone-map-img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+#map-flag {
+  position: absolute;
+  font-size: 24px;
+  transform: translate(-50%, -100%); /* Centers the bottom point of the emoji */
+  pointer-events: none;
+  filter: drop-shadow(2px 2px 2px rgba(0,0,0,0.8));
+}
