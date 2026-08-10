@@ -2,12 +2,6 @@
 
 BeastieBuddy is a Final Fantasy XIV companion application for searching creatures and displaying their locations on an in-game-style map.
 
-## Purpose
-
-This repository is public so that users can inspect the source code and understand how BeastieBuddy operates.
-
-The source is available for transparency and inspection. It is not an open-source project.
-
 ## Features
 
 * Beast/Mob search
