@@ -10,7 +10,7 @@ The source is available for transparency and inspection. It is not an open-sourc
 
 ## Features
 
-* Beastie search
+* Beast/Mob search
 * Creature location information
 * Zone map display
 * Location marker
