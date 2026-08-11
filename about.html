@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About BeastieBuddy</title>
+  <link rel="stylesheet" href="/src/about.css" />
+  <script type="module" src="/src/about.ts" defer></script>
+</head>
+<body>
+  <header id="titlebar">
+    <div class="title drag-region" data-tauri-drag-region>About BeastieBuddy</div>
+    <div class="window-controls">
+      <span id="btn-close" title="Close">✕</span>
+    </div>
+  </header>
+  <div class="content">
+    <p><strong>Version:</strong> <span id="app-version">...</span><br/><strong>Release Date:</strong> 08/10/2026</p>
+    <hr />
+    <p>Created by: <strong>rail2025</strong></p>
+    <p>Check out my other projects on <a href="#" id="link-github">github.com/rail2025</a>:</p>
+    <ul class="project-list">
+      <li><a href="#" class="repo-link" data-url="https://github.com/rail2025/AetherBlackbox">AetherBlackbox</a></li>
+      <li><a href="#" class="repo-link" data-url="https://github.com/rail2025/Aetherdraw_Overlay">AetherDraw Overlay</a></li>
+      <li><a href="#" class="repo-link" data-url="https://github.com/rail2025/PulltoOBS">OBStoABB</a></li>
+    </ul>
+    <hr />
+    <div class="button-row">
+      <button id="btn-bug" class="btn-green">Bug Report</button>
+      <button id="btn-donate" class="btn-red">Donate (Ko-fi)</button>
+    </div>
+  </div>
+</body>
+</html>

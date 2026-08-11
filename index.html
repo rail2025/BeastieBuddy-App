@@ -25,21 +25,25 @@
       </div>
 
       <nav id="tabs">
-        <button class="active">Beastie Search</button>
-        <button>Blue Mage Spellbook</button>
-        <button>Bestiary</button>
-        <button>Bestiary V2</button>
+        <button id="tab-search" class="active">Beastie Search</button>
+        <button id="tab-blu">Blue Mage Spellbook</button>
+        <button id="tab-bestiary">Bestiary</button>
+        <button id="tab-bestiary-v2">Bestiary V2</button>
+        <div style="flex-grow: 1;"></div>
+        <button id="btn-settings">Settings</button>
+        <button id="btn-about">About</button>
       </nav>
       
-      <div id="search-row">
-        <input type="text" id="search-input" value="" placeholder="Search..." autocomplete="off" />
-        <button>Settings</button>
-        <button>About</button>
+      <div id="view-search" style="display:flex; flex-direction:column; flex-grow:1; overflow:hidden;">
+        <div id="search-row">
+          <input type="text" id="search-input" value="" placeholder="Search..." autocomplete="off" />
+        </div>
+        
+        <main id="results-container"></main>
       </div>
-      
-      <main id="results-container">
-      </main>
-      
+
+      <div id="view-blu" class="hidden" style="display:flex; flex-direction:column; flex-grow:1; overflow:hidden;"></div>
+      <div id="view-bestiary-v2" class="hidden" style="display:flex; flex-direction:column; flex-grow:1; overflow:hidden;"></div>
       <footer id="status-bar">
         Search for a beastie to get tips!
       </footer>

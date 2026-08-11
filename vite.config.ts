@@ -27,6 +27,8 @@ export default defineConfig(async () => ({
             input: {
                 main: "index.html",
                 map: "map.html",
+                settings: "settings.html",
+                about: "about.html",
             },
         },
     },
