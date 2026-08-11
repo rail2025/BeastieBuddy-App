@@ -1,0 +1,44 @@
+body {
+  background-color: #111111;
+  color: #e0e0e0;
+  font-family: sans-serif;
+  font-size: 13px;
+  margin: 0;
+  overflow: hidden;
+}
+#titlebar {
+  background-color: #5b2c34;
+  display: flex;
+  justify-content: space-between;
+  padding: 4px 8px;
+}
+.drag-region {
+  -webkit-app-region: drag;
+  font-weight: bold;
+  user-select: none;
+}
+.window-controls span {
+  cursor: pointer;
+  -webkit-app-region: no-drag;
+}
+.content {
+  padding: 12px;
+}
+.section-title {
+  border-bottom: 1px solid #222;
+  padding-bottom: 4px;
+  margin-bottom: 8px;
+  color: #aaa;
+}
+.check-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 12px;
+  cursor: pointer;
+}
+.slider-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
