@@ -2,7 +2,7 @@
   "$schema": "../gen/schemas/desktop-schema.json",
   "identifier": "default",
   "description": "Capability for application windows",
-  "windows": ["main", "map-*"],
+  "windows": ["main", "map-*", "settings-window", "about-window"],
   "permissions": [
     "core:default",
     "core:window:allow-close",
@@ -17,6 +17,9 @@
     "core:webview:allow-create-webview-window",
     "core:webview:allow-internal-toggle-devtools",
     "core:window:allow-set-title",
-    "opener:default"
+    "opener:default",
+    "fs:allow-applocaldata-read",
+    "fs:allow-applocaldata-write",
+    "fs:allow-mkdir"
   ]
 }
