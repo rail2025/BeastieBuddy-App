@@ -4,6 +4,11 @@ BeastieBuddy is a Final Fantasy XIV companion application for searching creature
 
 ![Preview image of overlay](bb%20app%20overlay.PNG)
 
+## Download
+
+[**Download BeastieBuddy for Windows**](https://github.com/rail2025/BeastieBuddy-APP/releases/latest/download/beastiebuddy-app.exe)
+
+No installer. Download the `.exe` and run it.
 
 
 ## Features
