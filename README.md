@@ -10,6 +10,33 @@ BeastieBuddy is a Final Fantasy XIV companion application for searching creature
 
 No installer. Download the `.exe` and run it.
 
+### Windows Security Warning
+
+BeastieBuddy is currently distributed without a commercial code-signing certificate, so Windows may display an **"Unknown publisher"** warning when you first run it.
+
+This warning appears because the application is not currently digitally signed with a certificate recognized by Windows. It does **not** mean that the application is known to contain malware.
+
+BeastieBuddy's source code is publicly available in this repository for inspection, and you can build the application yourself if you prefer.
+
+If you downloaded BeastieBuddy from this official GitHub repository/release:
+
+1. Click **More info** on the Windows warning.
+2. Verify that you downloaded the file from this repository.
+3. Click **Run anyway** to launch BeastieBuddy.
+
+### Download Verification
+
+The official Windows executable can be verified using its SHA-256 checksum.
+
+**Current Windows EXE SHA-256:**
+
+`0fbc6344c987c22760c27b914ac9ad21b726d9d79729ab4c480adc047829a548`
+
+To calculate the SHA-256 checksum of a downloaded file in Windows PowerShell:
+
+Get-FileHash .\beastiebuddy-app.exe -Algorithm SHA256
+
+
 
 ## Features
 
