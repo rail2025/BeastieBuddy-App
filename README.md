@@ -12,11 +12,11 @@ No installer. Download the `.exe` and run it.
 
 ### Windows Security Warning
 
-BeastieBuddy is currently distributed without a commercial code-signing certificate, so Windows may display an **"Unknown publisher"** warning when you first run it.
+BeastieBuddy is distributed without a commercial code-signing certificate, so Windows may display an **"Unknown publisher"** warning when you first run it.
 
-This warning appears because the application is not currently digitally signed with a certificate recognized by Windows. It does **not** mean that the application is known to contain malware.
+This warning appears because the application is not digitally signed with a certificate recognized by Windows. It does **not** mean that the app has malware.
 
-BeastieBuddy's source code is publicly available in this repository for inspection, and you can build the application yourself if you prefer.
+BeastieBuddy's code is available in this repository for inspection, and you can build the application yourself if you prefer.
 
 If you downloaded BeastieBuddy from this official GitHub repository/release:
 
