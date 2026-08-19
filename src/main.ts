@@ -2,7 +2,7 @@ import { getCurrentWindow, LogicalSize } from '@tauri-apps/api/window';
 import { WebviewWindow } from '@tauri-apps/api/webviewWindow';
 import { listen } from '@tauri-apps/api/event';
 import { loadSaveData, saveSettingsData } from './save.ts';
-import { getUIElement } from './core-definitions.ts';
+import { getUIElement, SearchResult } from './core-definitions.ts';
 
 const appWindow = getCurrentWindow();
 const searchInput = getUIElement<HTMLInputElement>('search-input');
@@ -145,16 +145,16 @@ searchInput.addEventListener('input', (e) => {
         return;
       }
       
-      for (const item of data.results) {
+      for (const item of data.results as SearchResult[]) {
         const row = document.createElement('div');
         row.className = 'result-row';
         row.style.cursor = 'pointer';
         
-        const coords = item.coordinates?.[0] || {};
+        const coords = item.coordinates?.[0];
         const itemName = item.name || item.Name || 'Unknown';
-        const itemZone = item.zone || item.Zone || coords.zone || 'Unknown';
-        const itemX = item.x ?? item.X ?? coords.x ?? 1;
-        const itemY = item.y ?? item.Y ?? coords.y ?? 1;
+        const itemZone = item.zone || item.Zone || coords?.zone || 'Unknown';
+        const itemX = item.x ?? item.X ?? coords?.x ?? 1;
+        const itemY = item.y ?? item.Y ?? coords?.y ?? 1;
 
         const name = document.createElement('span');
         name.className = 'result-name';
@@ -181,6 +181,15 @@ searchInput.addEventListener('input', (e) => {
   }, 500);
 });
 
+function createSharedWindow(label: string, config: any) {
+  new WebviewWindow(label, {
+    decorations: false,
+    parent: appWindow.label,
+    alwaysOnTop: isPinned,
+    ...config
+  });
+}
+
 async function openMapWindow(x: number, y: number, zone: string) {
   const mapData = { x, y, zone, pinned: isPinned, opacity: currentOpacity };
   const existingMap = await WebviewWindow.getByLabel('map-window');
@@ -195,17 +204,14 @@ async function openMapWindow(x: number, y: number, zone: string) {
   const pos = await appWindow.outerPosition();
   const size = await appWindow.outerSize();
 
-  new WebviewWindow('map-window', {
+  createSharedWindow('map-window', {
     url: `map.html?x=${x}&y=${y}&pinned=${isPinned}&opacity=${currentOpacity}&zone=${encodeURIComponent(zone)}`,
     title: `Map - ${zone}`,
     width: 500,
     height: 530,
     x: pos.x + size.width + 10,
     y: pos.y,
-    decorations: false,
-    transparent: true,
-    parent: appWindow.label,
-    alwaysOnTop: isPinned
+    transparent: true
   });
 }
 
@@ -215,13 +221,10 @@ async function toggleWindow(label: string, url: string, title: string, width: nu
     await existing.close();
     return;
   }
- const pos = await appWindow.outerPosition();
-  new WebviewWindow(label, {
+  const pos = await appWindow.outerPosition();
+  createSharedWindow(label, {
     url, title, width, height,
-    x: pos.x + 50, y: pos.y + 50,
-    decorations: false,
-    parent: appWindow.label,
-    alwaysOnTop: isPinned
+    x: pos.x + 50, y: pos.y + 50
   });
 }
 

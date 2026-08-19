@@ -22,10 +22,13 @@ export type SearchResult = {
   Name?: string;
   zones?: string[];
   coordinates?: { zone: string; x: number; y: number }[];
+  zone?: string;
+  x?: number;
+  y?: number;
   Zone?: string;
   X?: number;
   Y?: number;
-  [key: string]: any;
+  dungeon?: string | null;
 };
 
 export type SpellSource = {

@@ -51,7 +51,7 @@ export async function initBestiaryV2(container: HTMLElement) {
     const data = await res.json();
     
     allBeasts = Object.entries(data.Beasts).map(([id, beast], index) => {
-      return { id, index, ...(beast as any) };
+      return { ...(beast as Omit<Beast, 'id' | 'index'>), id, index };
     });
 
     const saveData = await loadSaveData();
@@ -261,7 +261,7 @@ function renderData() {
   });
 }
 
-function showBestiaryDetails(id: string, beast: any, colorClass: string, iconHtml: string) {
+function showBestiaryDetails(id: string, beast: Beast, colorClass: string, iconHtml: string) {
   getUIElement('bestiary-placeholder').classList.add('hidden');
   const details = getUIElement('bestiary-details');
   details.classList.remove('hidden');

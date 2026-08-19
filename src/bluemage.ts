@@ -24,7 +24,7 @@ function setupEventListeners() {
   getUIElement('blu-search').addEventListener('input', renderList);
 }
 
-import { getUIElement, Spell } from './core-definitions.ts';
+import { getUIElement, Spell, SpellSource } from './core-definitions.ts';
 
 function renderList() {
   const leftPane = getUIElement('blu-left');
@@ -37,7 +37,7 @@ function renderList() {
     if (filterMode === 'learned' && !learnedSet.has(spell.Number)) return;
     if (filterMode === 'unlearned' && learnedSet.has(spell.Number)) return;
 
-    const searchStr = `${spell.Name} ${spell.Sources.map((s:any) => s.Name + ' ' + s.Location).join(' ')}`.toLowerCase();
+    const searchStr = `${spell.Name} ${spell.Sources.map((s: SpellSource) => s.Name + ' ' + s.Location).join(' ')}`.toLowerCase();
     if (filterText && !searchStr.includes(filterText)) return;
 
     const el = document.createElement('div');
@@ -73,21 +73,21 @@ function renderList() {
   });
 }
 
-function showDetails(spell: any) {
+function showDetails(spell: Spell) {
   const rightPane = getUIElement('blu-right');
   rightPane.classList.remove('hidden');
 
   let sourcesHtml = '';
   
-  const groupedSources = spell.Sources.reduce((acc: any, curr: any) => {
+  const groupedSources = spell.Sources.reduce((acc: Record<string, SpellSource[]>, curr: SpellSource) => {
     if (!acc[curr.Type]) acc[curr.Type] = [];
     acc[curr.Type].push(curr);
     return acc;
   }, {});
 
-  Object.entries(groupedSources).forEach(([type, sources]: [string, any]) => {
+  Object.entries(groupedSources).forEach(([type, sources]: [string, SpellSource[]]) => {
     sourcesHtml += `<div class="blu-source-group"><div class="blu-source-type">${type}</div>`;
-    sources.forEach((s: any) => {
+    sources.forEach((s: SpellSource) => {
       sourcesHtml += `
         <div class="blu-source-item">
           <div>&bull; Source: ${s.Name}</div>
