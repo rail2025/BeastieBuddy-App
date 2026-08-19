@@ -3,7 +3,7 @@ import { BaseDirectory, readTextFile, writeTextFile, exists, mkdir } from '@taur
 const SAVE_FILE = 'BeastieBuddy_save.json';
 
 export async function loadSaveData() {
-  const defaultData = { beasts: [], spells: [], settings: { opacity: "1.0", pinned: false, theme: "dark" } };
+  const defaultData = { beasts: [], spells: [], settings: { opacity: "1.0", pinned: false, theme: "light" } };
   try {
     const hasSave = await exists(SAVE_FILE, { baseDir: BaseDirectory.AppLocalData });
     if (!hasSave) return defaultData;

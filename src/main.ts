@@ -18,12 +18,12 @@ let isShaded = false;
 let originalHeight = 600;
 let isPinned = false;
 let currentOpacity = "1.0";
-let currentTheme = "dark";
+let currentTheme = "light";
 
 loadSaveData().then(async (data) => {
   currentOpacity = data.settings.opacity;
   isPinned = data.settings.pinned;
-  currentTheme = data.settings.theme || "dark";
+  currentTheme = data.settings.theme || "light";
   
   document.documentElement.setAttribute('data-theme', currentTheme);
   getUIElement('app').style.opacity = currentOpacity;
