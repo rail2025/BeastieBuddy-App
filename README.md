@@ -30,8 +30,11 @@ BeastieBuddy's code is available in this repository for inspection, and you can 
 If you downloaded BeastieBuddy from this official GitHub repository/release:
 
 1. Click **More info** on the Windows warning.
-2. Verify that you downloaded the file from this repository.
-3. Click **Run anyway** to launch BeastieBuddy.
+   ![Preview image of warning](warn1.PNG)
+
+3. Verify that you downloaded the file from this repository.
+4. Click **Run anyway** to launch BeastieBuddy.
+   ![Preview image of run anyway](warn2.PNG)
 
 ### Download Verification
 
