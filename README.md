@@ -1,6 +1,14 @@
 # ![Preview image of app icon](bbapp.webp) BeastieBuddy
 
 BeastieBuddy is a Final Fantasy XIV companion Windows desktop application for searching creatures and displaying their locations on an in-game-style map.
+<br>
+![Preview image of overlay](bblightbestiary.PNG)
+<br>
+![Preview image of overlay](bblightmode.PNG)
+<br>
+![Preview image of overlay](bblightshade.PNG)
+<br>
+![Preview image of overlay](bblightconfig.PNG)
 
 ![Preview image of overlay](bb%20app%20overlay.PNG)
 <br>
