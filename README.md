@@ -37,9 +37,9 @@ If you downloaded BeastieBuddy from this official GitHub repository/release:
 
 The official Windows executable can be verified using its SHA-256 checksum.
 
-**Current Windows EXE v1.0.3.0 SHA-256:**
+**Current Windows EXE v1.0.4.0 SHA-256:**
 
-`b30c7acd8cd3c7bb2e03c6d5a0554e628d064811d48c9f9860062807446d5a6d`
+`c5b71d656d100072e97efaf04c7eee479ace320d4c3025ba34616ecfdaf1ab14`
 
 To calculate the SHA-256 checksum of a downloaded file in Windows PowerShell:
 
