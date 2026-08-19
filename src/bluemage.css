@@ -129,3 +129,12 @@
   font-size: 11px;
   margin-top: 2px;
 }
+
+[data-theme="light"] #blu-right { background-color: transparent; }
+[data-theme="light"] .blu-top, [data-theme="light"] #blu-left, [data-theme="light"] .blu-hr, [data-theme="light"] .blu-source-type { border-color: var(--panel-border); }
+[data-theme="light"] #blu-search { background-color: var(--panel-bg); color: var(--text-main); border-color: var(--panel-border); }
+[data-theme="light"] .blu-list-item:hover, [data-theme="light"] .blu-list-item.selected { background-color: var(--highlight-bg); }
+[data-theme="light"] .blu-detail-header { color: #0056b3; }
+[data-theme="light"] .blu-detail-rank, [data-theme="light"] .blu-source-type, [data-theme="light"] .blu-list-name { color: var(--text-main); }
+[data-theme="light"] .blu-source-item, [data-theme="light"] .blu-list-number { color: var(--text-muted); }
+[data-theme="light"] .blu-btn-map { background-color: var(--panel-border); color: #ffffff; }

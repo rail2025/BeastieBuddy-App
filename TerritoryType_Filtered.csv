@@ -1,0 +1,1291 @@
+Row,Name,PlaceName,Map
+1,,0,0
+2,,0,0
+3,,0,0
+4,,0,0
+5,,0,0
+6,,0,0
+7,,0,0
+8,,0,0
+9,,0,0
+10,,0,0
+11,,0,0
+12,,0,0
+13,,0,0
+14,,0,0
+15,,0,0
+16,,0,0
+17,,0,0
+18,,0,0
+19,,0,0
+20,,0,0
+21,,0,0
+22,,0,0
+24,,0,0
+25,,0,0
+26,,0,0
+27,,0,0
+28,,0,0
+29,,0,0
+30,,0,0
+31,,0,0
+128,s1t1,Limsa Lominsa Upper Decks,Limsa Lominsa Upper Decks
+129,s1t2,Limsa Lominsa Lower Decks,Limsa Lominsa Lower Decks
+130,w1t1,Ul'dah - Steps of Nald,Ul'dah - Steps of Nald
+131,w1t2,Ul'dah - Steps of Thal,Ul'dah - Steps of Thal
+132,f1t1,New Gridania,New Gridania
+133,f1t2,Old Gridania,Old Gridania
+134,s1f1,Middle La Noscea,Middle La Noscea
+135,s1f2,Lower La Noscea,Lower La Noscea
+136,s1h1_test,Mist,Mist
+137,s1f3,Eastern La Noscea,Eastern La Noscea
+138,s1f4,Western La Noscea,Western La Noscea
+139,s1f5,Upper La Noscea,Upper La Noscea
+140,w1f1,Western Thanalan,Western Thanalan
+141,w1f2,Central Thanalan,Central Thanalan
+142,w1d7_battle,Halatali,Halatali
+143,,0,0
+144,w1eb,The Gold Saucer,The Gold Saucer
+145,w1f3,Eastern Thanalan,Eastern Thanalan
+146,w1f4,Southern Thanalan,Southern Thanalan
+147,w1f5,Northern Thanalan,Northern Thanalan
+148,f1f1,Central Shroud,Central Shroud
+149,z1z3,The Feasting Grounds,The Feasting Grounds
+150,,0,0
+151,l1r3,The World of Darkness,The World of Darkness
+152,f1f2,East Shroud,East Shroud
+153,f1f3,South Shroud,South Shroud
+154,f1f4,North Shroud,North Shroud
+155,r1f1,Coerthas Central Highlands,Coerthas Central Highlands
+156,l1f1,Mor Dhona,Mor Dhona
+157,,0,0
+158,,0,0
+159,s1d3,The Wanderer's Palace,The Wanderer's Palace
+160,s1d4,Pharos Sirius,Pharos Sirius
+161,,0,0
+162,,0,0
+163,,0,0
+164,,0,0
+166,,0,0
+167,f1d3,Amdapor Keep,Amdapor Keep
+168,,0,0
+169,,0,0
+170,,0,0
+171,r1r1,Dzemael Darkhold,Dzemael Darkhold
+172,r1r2,Aurum Vale,Aurum Vale
+174,l1r1,Labyrinth of the Ancients,Labyrinth of the Ancients
+175,,0,0
+176,z1j1,Mordion Gaol,Eorzea
+177,s1ti,Mizzenmast Inn,Mizzenmast Inn
+178,w1ti,The Hourglass,The Hourglass
+179,f1ti,The Roost,The Roost
+180,s1f6,Outer La Noscea,Outer La Noscea
+181,s1t1_opening,Limsa Lominsa,Limsa Lominsa Upper Decks
+182,w1t1_opening,Ul'dah - Steps of Nald,Ul'dah - Steps of Nald
+183,f1t1_opening,New Gridania,New Gridania
+184,,0,0
+185,,0,0
+186,,0,0
+187,,0,0
+188,s1d8,The Wanderer's Palace,The Wanderer's Palace (Hard)
+189,f1d7,Amdapor Keep,Amdapor Keep (Hard)
+190,go002,Central Shroud,Central Shroud
+191,go005,East Shroud,East Shroud
+192,go006,South Shroud,South Shroud
+193,w1b1,IC-06 Central Decks,IC-06 Central Decks
+194,w1b2,IC-06 Regeneration Grid,IC-06 Regeneration Grid
+195,w1b3,IC-06 Main Bridge,IC-06 Main Bridge
+196,w1b4,The Burning Heart,The Burning Heart
+197,,0,0
+198,s1e4,Command Room,Command Room
+199,,0,0
+200,,0,0
+201,,0,0
+202,,0,0
+203,,0,0
+204,f1e4,Seat of the First Bow,Seat of the First Bow
+205,f1e5,Lotus Stand,Lotus Stand
+206,,0,0
+207,,0,0
+208,,0,0
+209,,0,0
+210,w1e4,Heart of the Sworn,Heart of the Sworn
+211,,0,0
+212,w1e6,The Waking Sands,The Waking Sands
+213,,0,0
+214,go001,Middle La Noscea,Middle La Noscea
+215,go003,Western Thanalan,Western Thanalan
+216,go004,Central Thanalan,Central Thanalan
+217,,0,0
+218,,0,0
+219,go008,Central Shroud,Central Shroud
+220,go007,South Shroud,South Shroud
+221,go009,Upper La Noscea,Upper La Noscea
+222,go010,Lower La Noscea,Lower La Noscea
+223,go011,Coerthas Central Highlands,Coerthas Central Highlands
+224,,0,0
+225,e0002,Central Shroud,Central Shroud
+226,e0003,Central Shroud,Central Shroud
+227,e0004,Central Shroud,Central Shroud
+228,e0007,North Shroud,North Shroud
+229,e0008,South Shroud,South Shroud
+230,e0009,Central Shroud,Central Shroud
+231,e0010,South Shroud,South Shroud
+232,e0016,South Shroud,South Shroud
+233,e0001,Central Shroud,Central Shroud
+234,e0005,East Shroud,East Shroud
+235,e0006,South Shroud,South Shroud
+236,e0011,South Shroud,South Shroud
+237,e0012,Central Shroud,Central Shroud
+238,e0013,Old Gridania,Old Gridania
+239,e0014,Central Shroud,Central Shroud
+240,e0015,North Shroud,North Shroud
+241,s1b1,Upper Aetheroacoustic Exploratory Site,Upper Aetheroacoustic Exploratory Site
+242,s1b2,Lower Aetheroacoustic Exploratory Site,Lower Aetheroacoustic Exploratory Site
+243,s1b3,The Ragnarok,The Ragnarok
+244,s1b4,Ragnarok Drive Cylinder,Ragnarok Drive Cylinder
+245,s1b5,Ragnarok Central Core,Ragnarok Central Core
+246,w1b5,IC-04 Main Bridge,Eorzea
+247,s1b7,Ragnarok Main Bridge,Eorzea
+248,e0017,Central Thanalan,Central Thanalan
+249,e0018,Lower La Noscea,Lower La Noscea
+250,s1p1,Wolves' Den Pier,Wolves' Den Pier
+251,e0028,Ul'dah - Steps of Nald,Ul'dah - Steps of Nald
+252,e0038,Middle La Noscea,Middle La Noscea
+253,e0019,Central Thanalan,Central Thanalan
+254,e0020,Ul'dah - Steps of Nald,Ul'dah - Steps of Nald
+255,e0021,Western Thanalan,Western Thanalan
+256,e0022,Eastern Thanalan,Eastern Thanalan
+257,e0023,Eastern Thanalan,Eastern Thanalan
+258,e0024,Central Thanalan,Central Thanalan
+259,e0025,Ul'dah - Steps of Nald,Ul'dah - Steps of Nald
+260,e0026,Southern Thanalan,Southern Thanalan
+261,e0027,Southern Thanalan,Southern Thanalan
+262,e0034,Lower La Noscea,Lower La Noscea
+263,e0035,Western La Noscea,Western La Noscea
+264,e0036,Lower La Noscea,Lower La Noscea
+265,e0037,Lower La Noscea,Lower La Noscea
+266,e0029,Eastern Thanalan,Eastern Thanalan
+267,e0030,Western Thanalan,Western Thanalan
+268,e0031,Eastern Thanalan,Eastern Thanalan
+269,e0032,Western Thanalan,Western Thanalan
+270,e0041,Central Thanalan,Central Thanalan
+271,e0042,Central Thanalan,Central Thanalan
+272,e0039,Middle La Noscea,Middle La Noscea
+273,e0043,Western Thanalan,Western Thanalan
+274,e0046,Ul'dah - Steps of Nald,Ul'dah - Steps of Nald
+275,e0047,Eastern Thanalan,Eastern Thanalan
+276,z1e5,Hall of Summoning,Eorzea
+277,e0048,East Shroud,East Shroud
+278,e0049,Western Thanalan,Western Thanalan
+279,e0050,Lower La Noscea,Lower La Noscea
+280,e0040,Western La Noscea,Western La Noscea
+281,o1fa,The Whorleater,The Whorleater
+282,s1i1,Private Cottage - Mist,Private Cottage - Mist
+283,s1i2,Private House - Mist,Private House - Mist
+284,s1i3,Private Mansion - Mist,Private Mansion - Mist
+285,e0053,Middle La Noscea,Middle La Noscea
+286,e0054,Rhotano Sea,Rhotano Sea
+287,e0055,Lower La Noscea,Lower La Noscea
+288,e0056,Rhotano Sea,Rhotano Sea
+289,e0057,East Shroud,East Shroud
+290,e0063,East Shroud,East Shroud
+291,e0064,South Shroud,South Shroud
+292,w1fa_2,Bowl of Embers,Bowl of Embers
+293,s1fa_2,The Navel,The Navel
+294,r1fa_2,The Howling Eye,The Howling Eye
+295,w1fa_3,Bowl of Embers,Bowl of Embers
+296,s1fa_3,The Navel,The Navel
+297,r1fa_3,The Howling Eye,The Howling Eye
+298,go012,Coerthas Central Highlands,Coerthas Central Highlands
+299,go013,Mor Dhona,Mor Dhona
+300,go014,Mor Dhona,Mor Dhona
+301,e0051,Coerthas Central Highlands,Coerthas Central Highlands
+302,e0052,Coerthas Central Highlands,Coerthas Central Highlands
+303,e0058,East Shroud,East Shroud
+304,e0059,Coerthas Central Highlands,Coerthas Central Highlands
+305,e0060,Mor Dhona,Mor Dhona
+306,e0061,Southern Thanalan,Southern Thanalan
+307,e0062,Lower La Noscea,Lower La Noscea
+308,e0065,Mor Dhona,Mor Dhona
+309,e0066,Mor Dhona,Mor Dhona
+310,e0067,Eastern La Noscea,Eastern La Noscea
+311,e0068,Eastern La Noscea,Eastern La Noscea
+312,e0069,Southern Thanalan,Southern Thanalan
+313,e0070,Coerthas Central Highlands,Coerthas Central Highlands
+314,e0071,Central Thanalan,Central Thanalan
+315,e0072,Mor Dhona,Mor Dhona
+316,e0073,Coerthas Central Highlands,Coerthas Central Highlands
+317,e0074,South Shroud,South Shroud
+318,e0075,Southern Thanalan,Southern Thanalan
+319,e0076,Central Shroud,Central Shroud
+320,e0077,Central Shroud,Central Shroud
+321,e0078,North Shroud,North Shroud
+322,e0079,Coerthas Central Highlands,Coerthas Central Highlands
+323,e0080,Southern Thanalan,Southern Thanalan
+324,e0081,North Shroud,North Shroud
+325,e0082,Outer La Noscea,Outer La Noscea
+326,e0083,Mor Dhona,Mor Dhona
+327,e0084,Eastern La Noscea,Eastern La Noscea
+328,e0085,Upper La Noscea,Upper La Noscea
+329,e0086,The Wanderer's Palace,The Wanderer's Palace
+330,e0087,Western La Noscea,Western La Noscea
+331,r1fa_event,The Howling Eye,The Howling Eye
+332,,0,0
+333,,0,0
+334,,0,0
+335,l1f1_event,Mor Dhona,Mor Dhona
+336,,0,0
+337,,0,0
+338,s1b7_2,Eorzean Subterrane,Eorzea
+339,s1h1,Mist,Mist
+340,f1h1,The Lavender Beds,The Lavender Beds
+341,w1h1,The Goblet,The Goblet
+342,f1i1,Private Cottage - The Lavender Beds,Private Cottage - The Lavender Beds
+343,f1i2,Private House - The Lavender Beds,Private House - The Lavender Beds
+344,f1i3,Private Mansion - The Lavender Beds,Private Mansion - The Lavender Beds
+345,w1i1,Private Cottage - The Goblet,Private Cottage - The Goblet
+346,w1i2,Private House - The Goblet,Private House - The Goblet
+347,w1i3,Private Mansion - The Goblet,Private Mansion - The Goblet
+348,w1fb,Porta Decumana,Porta Decumana
+349,w1d6,Copperbell Mines,Copperbell Mines (Hard)
+350,f1d4,Haukke Manor,Haukke Manor (Hard)
+351,l1e1,The Rising Stones,The Rising Stones
+352,,0,0
+353,z1z1,Kugane Ohashi,Kugane Ohashi
+354,z1z2,The Dancing Plague,The Dancing Plague
+355,f1b1,Dalamud's Shadow,Dalamud's Shadow
+356,f1b2,The Outer Coil,The Outer Coil
+357,f1b3,Central Decks,Central Decks
+358,f1b4,The Holocharts,The Holocharts
+359,o1fa_2,The Whorleater,The Whorleater
+360,w1d7,Halatali,Halatali (Hard)
+361,s1d5,Hullbreaker Isle,Hullbreaker Isle
+362,s1d6,Brayflox's Longstop,Brayflox's Longstop (Hard)
+363,f1d5,The Lost City of Amdapor,The Lost City of Amdapor
+364,f1fa_2,Thornmarch,Thornmarch
+365,r1d2,Stone Vigil,The Stone Vigil (Hard)
+366,r1fb,Griffin Crossing,Griffin Crossing
+367,w1d8,The Sunken Temple of Qarn,The Sunken Temple of Qarn (Hard)
+368,r1f1_battle,The Weeping Saint,Coerthas Central Highlands
+369,w1d2_battle,Hall of the Bestiarii,Halatali
+370,f1b5,Main Bridge,Eorzea
+371,,0,0
+372,l1r2,Syrcus Tower,Syrcus Tower
+373,f1d6,The Tam-Tara Deepcroft,The Tam-Tara Deepcroft (Hard)
+374,f1fb,The Striking Tree,The Striking Tree
+375,f1fb_2,The Striking Tree,The Striking Tree
+376,l1p1,Carteneau Flats: Borderland Ruins,Carteneau Flats: Borderland Ruins
+377,r1fc,Akh Afah Amphitheatre,Akh Afah Amphitheatre
+378,r1fc_2,Akh Afah Amphitheatre,Akh Afah Amphitheatre
+379,e0090,Mor Dhona,Mor Dhona
+380,f1b1_2,Dalamud's Shadow,Dalamud's Shadow
+381,f1b2_2,The Outer Coil,The Outer Coil
+382,f1b3_2,Central Decks,Central Decks
+383,f1b4_2,The Holocharts,The Holocharts
+384,s1i4,Private Chambers - Mist,Private Chambers - Mist
+385,f1i4,Private Chambers - The Lavender Beds,Private Chambers - The Lavender Beds
+386,w1i4,Private Chambers - The Goblet,Private Chambers - The Goblet
+387,s1d7,Sastasha,Sastasha (Hard)
+388,w1ed,Chocobo Square,The Gold Saucer
+389,s1fb,Chocobo Square,Chocobo Square
+390,w1fc,Chocobo Square,Chocobo Square
+391,f1fc,Chocobo Square,Chocobo Square
+392,f1e6,Sanctum of the Twelve,East Shroud
+393,f1e6_prv,Sanctum of the Twelve,East Shroud
+394,f1f3_battle,South Shroud,South Shroud
+395,r1e2,Intercessory,Intercessory
+396,f1d3_battle,Amdapor Keep,Amdapor Keep
+397,r2f1,Coerthas Western Highlands,Coerthas Western Highlands
+398,d2f1,The Dravanian Forelands,The Dravanian Forelands
+399,d2f2,The Dravanian Hinterlands,The Dravanian Hinterlands
+400,d2f3,The Churning Mists,The Churning Mists
+401,a2f1,The Sea of Clouds,The Sea of Clouds
+402,a2f2,Azys Lla,Azys Lla
+403,ec008,Ala Mhigo,The Hall of the Griffin
+404,e0091,Limsa Lominsa Lower Decks,Limsa Lominsa Lower Decks
+405,e0092,Western La Noscea,Western La Noscea
+406,e0093,Western La Noscea,Western La Noscea
+407,e0094,Rhotano Sea,Rhotano Sea
+408,e0095,Eastern La Noscea,Eastern La Noscea
+409,e0096,Limsa Lominsa Upper Decks,Limsa Lominsa Upper Decks
+410,e0097,Northern Thanalan,Northern Thanalan
+411,e0098,Eastern La Noscea,Eastern La Noscea
+412,e0099,Upper La Noscea,Upper La Noscea
+413,e0100,Western La Noscea,Western La Noscea
+414,e0101,Eastern La Noscea,Eastern La Noscea
+415,e0102,Lower La Noscea,Lower La Noscea
+416,,0,0
+417,w1fc_tutorial,Chocobo Square,Chocobo Square
+418,r2t1,Foundation,Foundation
+419,r2t2,The Pillars,The Pillars
+420,a2d2,Neverreap,Neverreap
+421,,0,0
+422,,0,0
+423,s1i5,Company Workshop - Mist,Company Workshop - Mist
+424,w1i5,Company Workshop - The Goblet,Company Workshop - The Goblet
+425,f1i5,Company Workshop - The Lavender Beds,Company Workshop - The Lavender Beds
+426,z1e9,The Chrysalis,The Chrysalis
+427,r2e1,Saint Endalim's Scholasticate,Saint Endalim's Scholasticate
+428,r2e3,Seat of the Lord Commander,Seat of the Lord Commander
+429,r2ti,Cloud Nine,Cloud Nine
+430,a2d3,The Fractal Continuum,The Fractal Continuum
+431,s2p1,Seal Rock,Seal Rock
+432,d2fa,Thok ast Thok,Thok ast Thok
+433,r2e4,Fortemps Manor,Fortemps Manor
+434,,0,0
+435,,0,0
+436,a2fa,The Limitless Blue,The Limitless Blue
+437,a2fb,Singularity Reactor,Singularity Reactor
+438,,0,0
+439,r2e5,The Lightfeather Proving Grounds,The Lightfeather Proving Grounds
+440,r2e6,Ruling Chamber,Ruling Chamber
+441,,0,0
+442,d2a1,The Fist of the Father,The Fist of the Father
+443,d2a2,The Cuff of the Father,The Cuff of the Father
+444,d2a3,The Arm of the Father,The Arm of the Father
+445,d2a4,The Burden of the Father,The Burden of the Father
+446,d2fa_2,Thok ast Thok,Thok ast Thok
+447,a2fa_2,The Limitless Blue,The Limitless Blue
+448,a2fb_2,Singularity Reactor,Singularity Reactor
+449,d2a1_2,The Fist of the Father,The Fist of the Father
+450,d2a2_2,The Cuff of the Father,The Cuff of the Father
+451,d2a3_2,The Arm of the Father,The Arm of the Father
+452,d2a4_2,The Burden of the Father,The Burden of the Father
+453,e0103,Western La Noscea,Western La Noscea
+454,e0104,Upper La Noscea,Upper La Noscea
+455,e0105,The Sea of Clouds,The Sea of Clouds
+456,e0106,Ruling Chamber,Ruling Chamber
+457,e0107,Akh Afah Amphitheatre,Akh Afah Amphitheatre
+458,e0108,Foundation,Foundation
+459,e0109,Azys Lla,Azys Lla
+460,e0110,Halatali,Halatali (Hard)
+461,e0111,The Sea of Clouds,The Sea of Clouds
+462,d2e2,Sacrificial Chamber,Sacrificial Chamber
+463,d2e3,Matoya's Cave,Matoya's Cave
+464,e0112,The Dravanian Forelands,The Dravanian Forelands
+465,e0113,Eastern Thanalan,Eastern Thanalan
+466,e0114,Upper La Noscea,Upper La Noscea
+467,e0115,Coerthas Western Highlands,Coerthas Western Highlands
+468,e0116,Coerthas Central Highlands,Coerthas Central Highlands
+469,e0117,Coerthas Central Highlands,Coerthas Central Highlands
+470,e0118,Coerthas Western Highlands,Coerthas Western Highlands
+471,e0119,Eastern La Noscea,Eastern La Noscea
+472,e0120,Coerthas Western Highlands,Coerthas Western Highlands
+473,e0121,South Shroud,South Shroud
+474,e0122,Limsa Lominsa Upper Decks,Limsa Lominsa Upper Decks
+475,e0123,Coerthas Central Highlands,Coerthas Central Highlands
+476,e0124,The Dravanian Hinterlands,The Dravanian Hinterlands
+477,e0125,Coerthas Western Highlands,Coerthas Western Highlands
+478,d2t1,Idyllshire,Idyllshire
+479,e0126,Coerthas Western Highlands,Coerthas Western Highlands
+480,e0127,Mor Dhona,Mor Dhona
+481,e0128,The Dravanian Forelands,The Dravanian Forelands
+482,e0129,The Dravanian Forelands,The Dravanian Forelands
+483,e0130,Northern Thanalan,Northern Thanalan
+484,e0131,Lower La Noscea,Lower La Noscea
+485,e0132,The Dravanian Hinterlands,The Dravanian Hinterlands
+486,e0133,Outer La Noscea,Outer La Noscea
+487,e0134,Coerthas Central Highlands,Coerthas Central Highlands
+488,e0135,Coerthas Central Highlands,Coerthas Central Highlands
+489,e0136,Coerthas Western Highlands,Coerthas Western Highlands
+490,e0137,Hullbreaker Isle,Hullbreaker Isle
+491,e0138,Southern Thanalan,Southern Thanalan
+492,e0139,The Sea of Clouds,The Sea of Clouds
+493,e0140,Coerthas Western Highlands,Coerthas Western Highlands
+494,e0141,Eastern Thanalan,Eastern Thanalan
+495,e0142,Lower La Noscea,Lower La Noscea
+496,e0143,Coerthas Central Highlands,Coerthas Central Highlands
+497,e0144,Coerthas Western Highlands,Coerthas Western Highlands
+498,e0145,Coerthas Western Highlands,Coerthas Western Highlands
+499,e0146,The Pillars,The Pillars
+500,e0147,Coerthas Central Highlands,Coerthas Central Highlands
+501,e0148,The Churning Mists,The Churning Mists
+502,e0149,Carteneau Flats: Borderland Ruins,Carteneau Flats: Borderland Ruins
+503,e0150,The Dravanian Hinterlands,The Dravanian Hinterlands
+504,l1e2,The Eighteenth Floor,The Eighteenth Floor
+505,d2e4,Alexander,The Gordian Knot
+506,s1p3,Chocobo Square,0
+507,a2e2,Central Azys Lla,Central Azys Lla
+508,z2r1,Void Ark,Void Ark
+509,z1z4,The Gilded Araya,The Gilded Araya
+510,s1d9,Pharos Sirius,Pharos Sirius (Hard)
+511,d2d4,Saint Mocianne's Arboretum,Saint Mocianne's Arboretum
+512,a2fc,The Diadem,0
+513,e0151,The Vault,The Vault
+514,a2fc_2,The Diadem,0
+515,a2fc_3,The Diadem,0
+516,,0,0
+517,a2fd,Containment Bay S1T7,Containment Bay S1T7
+518,,0,0
+519,f1d8,The Lost City of Amdapor,The Lost City of Amdapor (Hard)
+520,d2a5,The Fist of the Son,The Fist of the Son
+521,d2a6,The Cuff of the Son,The Cuff of the Son
+522,d2a7,The Arm of the Son,The Arm of the Son
+523,d2a8,The Burden of the Son,The Burden of the Son
+524,a2fd_2,Containment Bay S1T7,Containment Bay S1T7
+525,,0,0
+526,,0,0
+527,,0,0
+528,,0,0
+529,d2a5_2,The Fist of the Son,The Fist of the Son
+530,d2a6_2,The Cuff of the Son,The Cuff of the Son
+531,d2a7_2,The Arm of the Son,The Arm of the Son
+532,d2a8_2,The Burden of the Son,The Burden of the Son
+533,ec001,Coerthas Central Highlands,Coerthas Central Highlands
+534,f1tg,Twin Adder Barracks,Twin Adder Barracks
+535,w1tg,Flame Barracks,Flame Barracks
+536,s1tg,Maelstrom Barracks,Maelstrom Barracks
+537,s1p2_begin01,The Fold,The Fold
+538,s1p2_begin02,The Fold,The Fold
+539,s1p2_begin03,The Fold,The Fold
+540,s1p2_begin04,The Fold,The Fold
+541,s1p2_begin05,The Fold,The Fold
+542,s1p2_begin06,The Fold,The Fold
+543,s1p2_begin07,The Fold,The Fold
+544,s1p2_begin08,The Fold,The Fold
+545,s1p2_begin09,The Fold,The Fold
+546,s1p2_begin10,The Fold,The Fold
+547,s1p2_begin11,The Fold,The Fold
+548,s1p2_begin12,The Fold,The Fold
+549,s1p2_begin13,The Fold,The Fold
+550,s1p2_begin14,The Fold,The Fold
+551,s1p2_begin15,The Fold,The Fold
+552,s1f4_begin16,Western La Noscea,Western La Noscea
+553,d2e5,Alexander,The Midan Knot
+554,r2p1,The Fields of Glory,The Fields of Glory
+555,,0,0
+556,z2r2,The Weeping City of Mhach,The Weeping City of Mhach
+557,s1da,Hullbreaker Isle,Hullbreaker Isle (Hard)
+558,w1c1,The Aquapolis,The Aquapolis
+559,r1fe,Steps of Faith,Steps of Faith
+560,ec002,Aetherochemical Research Facility,Aetherochemical Research Facility
+561,f1c1_dd001,The Palace of the Dead,0
+562,f1c2_dd002,The Palace of the Dead,0
+563,f1c3_dd003,The Palace of the Dead,0
+564,f1c4_dd004,The Palace of the Dead,0
+565,f1c4_dd005,The Palace of the Dead,0
+566,r1fe_2,Steps of Faith,Steps of Faith
+567,a2e3,The Parrock,The Parrock
+568,a2e4,Leofard's Chambers,Leofard's Chambers
+569,r1e3,Steps of Faith,Steps of Faith
+570,f1e7,The Palace of the Dead,The Palace of the Dead
+571,f1d9,Haunted Manor,Haunted Manor
+572,,0,0
+573,s1i6,Topmast Apartment Lobby,Topmast Apartment Lobby
+574,f1i6,Lily Hills Apartment Lobby,Lily Hills Apartment Lobby
+575,w1i6,Sultana's Breath Apartment Lobby,Sultana's Breath Apartment Lobby
+576,a2fe,Containment Bay P1T6,Containment Bay P1T6
+577,a2fe_2,Containment Bay P1T6,Containment Bay P1T6
+578,d2d7,The Great Gubal Library,The Great Gubal Library (Hard)
+579,w1ee,The Battlehall,The Battlehall
+580,d2a9,Eyes of the Creator,Eyes of the Creator
+581,d2aa,Breath of the Creator,Breath of the Creator
+582,d2ab,Heart of the Creator,Heart of the Creator
+583,d2ac,Soul of the Creator,Soul of the Creator
+584,d2a9_2,Eyes of the Creator,Eyes of the Creator
+585,d2aa_2,Breath of the Creator,Breath of the Creator
+586,d2ab_2,Heart of the Creator,Heart of the Creator
+587,d2ac_2,Soul of the Creator,Soul of the Creator
+588,d2e7,Heart of the Creator,Heart of the Creator
+589,s1p3_2,Chocobo Square,0
+590,s1p3_3,Chocobo Square,0
+591,s1p3_4,Chocobo Square,0
+592,ec003,Bowl of Embers,Bowl of Embers
+593,f1c5_dd006,The Palace of the Dead,0
+594,f1c5_dd007,The Palace of the Dead,0
+595,f1c5_dd008,The Palace of the Dead,0
+596,f1c6_dd009,The Palace of the Dead,0
+597,f1c6_dd010,The Palace of the Dead,0
+598,f1c6_dd011,The Palace of the Dead,0
+599,f1c8_dd012,The Palace of the Dead,0
+600,f1c8_dd013,The Palace of the Dead,0
+601,f1c9_dd014,The Palace of the Dead,0
+602,f1c9_dd015,The Palace of the Dead,0
+603,f1c7_dd016,The Palace of the Dead,0
+604,f1c7_dd017,The Palace of the Dead,0
+605,f1c7_dd018,The Palace of the Dead,0
+606,f1c7_dd019,The Palace of the Dead,0
+607,f1c7_dd020,The Palace of the Dead,0
+608,s1i4_2,Topmast Apartment,Topmast Apartment
+609,f1i4_2,Lily Hills Apartment,Lily Hills Apartment
+610,w1i4_2,Sultana's Breath Apartment,Sultana's Breath Apartment
+611,w1ef,Frondale's Home for Friendless Foundlings,Frondale's Home for Friendless Foundlings
+612,g3f1,The Fringes,The Fringes
+613,e3f1,The Ruby Sea,The Ruby Sea
+614,e3f2,Yanxia,Yanxia
+615,,0,0
+616,,0,0
+617,d2d8,Sohm Al,Sohm Al (Hard)
+618,,0,0
+619,,0,0
+620,g3f2,The Peaks,The Peaks
+621,g3f3,The Lochs,The Lochs
+622,e3f3,The Azim Steppe,The Azim Steppe
+623,,0,0
+624,a2fc_4,The Diadem,0
+625,a2fc_5,The Diadem,0
+626,,0,0
+627,z2r3,Dun Scaith,Dun Scaith
+628,e3t1,Kugane,Kugane
+629,e3ti,Bokairo Inn,Bokairo Inn
+630,,0,0
+631,,0,0
+632,,0,0
+633,ec004,Carteneau Flats: Borderland Ruins,Carteneau Flats: Borderland Ruins
+634,e0194,Yanxia,Yanxia
+635,g3t1,Rhalgr's Reach,Rhalgr's Reach
+636,l1e3,Omega Control,Omega Control
+637,a2fg,Containment Bay Z1T9,Containment Bay Z1T9
+638,a2fg_2,Containment Bay Z1T9,Containment Bay Z1T9
+639,e3e1,Ruby Bazaar Offices,Ruby Bazaar Offices
+640,e0176,The Fringes,The Fringes
+641,e1h1,Shirogane,Shirogane
+642,,0,0
+643,,0,0
+644,,0,0
+645,,0,0
+646,,0,0
+647,e0164,The Fringes,The Fringes
+648,e0165,The Fringes,The Fringes
+649,e1i1,Private Cottage - Shirogane,Private Cottage - Shirogane
+650,e1i2,Private House - Shirogane,Private House - Shirogane
+651,e1i3,Private Mansion - Shirogane,Private Mansion - Shirogane
+652,e1i4,Private Chambers - Shirogane,Private Chambers - Shirogane
+653,e1i5,Company Workshop - Shirogane,Company Workshop - Shirogane
+654,e1i6,Kobai Goten Apartment Lobby,Kobai Goten Apartment Lobby
+655,e1i4_2,Kobai Goten Apartment,Kobai Goten Apartment
+656,a2fh_2,The Diadem,0
+657,e0195,The Ruby Sea,The Ruby Sea
+658,e0196,The Interdimensional Rift,The Interdimensional Rift
+659,e0189,Rhalgr's Reach,Rhalgr's Reach
+660,,0,0
+661,,0,0
+662,e3d4,Kugane Castle,Kugane Castle
+663,g3d3,The Temple of the Fist,The Temple of the Fist
+664,e0152,Kugane,Kugane
+665,ec005,Kugane,Kugane
+666,e0183,Ul'dah - Steps of Thal,Ul'dah - Steps of Thal
+667,e0153,Kugane,Kugane
+668,e0178,Eastern Thanalan,Eastern Thanalan
+669,e0154,Southern Thanalan,Southern Thanalan
+670,e0188,The Fringes,The Fringes
+671,e0191,The Fringes,The Fringes
+672,e0180,Mor Dhona,Mor Dhona
+673,e0155,Sohm Al,Sohm Al Foothills
+674,e3fa,The Blessed Treasury,The Blessed Treasury
+675,e0179,Western La Noscea,Western La Noscea
+676,e0181,The Great Gubal Library,The Great Gubal Library
+677,e3fa_2,The Blessed Treasury,The Blessed Treasury
+678,e0177,The Fringes,The Fringes
+679,g3fb,The Royal Airship Landing,The Royal Airship Landing
+680,o3e1,The <italic(1)>Misery<italic(0)>,The <italic(1)>Misery<italic(0)>
+681,e3e5,The House of the Fierce,The House of the Fierce
+682,e3ea,The Doman Enclave,The Doman Enclave
+683,g3e1,The First Altar of Djanan Qhat,The First Altar of Djanan Qhat
+684,ec007,The Lochs,The Lochs
+685,e0190,Yanxia,Yanxia
+686,e0192,The Lochs,The Lochs
+687,e0193,The Lochs,The Lochs
+688,ec006,The Azim Steppe,The Azim Steppe
+689,,0,0
+690,z3o1,The Interdimensional Rift,The Interdimensional Rift
+691,z3o2,Deltascape V1.0,Deltascape V1.0
+692,z3o3,Deltascape V2.0,Deltascape V2.0
+693,z3o4,Deltascape V3.0,Deltascape V3.0
+694,z3o5,Deltascape V4.0,Deltascape V4.0
+695,z3o2_2,Deltascape V1.0,Deltascape V1.0
+696,z3o3_2,Deltascape V2.0,Deltascape V2.0
+697,z3o4_2,Deltascape V3.0,Deltascape V3.0
+698,z3o5_2,Deltascape V4.0,Deltascape V4.0
+699,e0162,Coerthas Central Highlands,Coerthas Central Highlands
+700,e0163,Foundation,Foundation
+701,e0172,Seal Rock,Seal Rock
+702,e0173,Aetherochemical Research Facility,Aetherochemical Research Facility
+703,e0156,The Fringes,The Fringes
+704,e0157,Dalamud's Shadow,Dalamud's Shadow
+705,e0168,Ul'dah - Steps of Thal,Ul'dah - Steps of Thal
+706,e0169,Ul'dah - Steps of Thal,Ul'dah - Steps of Thal
+707,e0182,The Weeping City of Mhach,The Weeping City of Mhach
+708,e0184,Rhotano Sea,Rhotano Sea
+709,e0185,Coerthas Western Highlands,Coerthas Western Highlands
+710,e0186,Kugane,Kugane
+711,e0187,The Ruby Sea,The Ruby Sea
+712,o3c1,The Lost Canals of Uznair,The Lost Canals of Uznair
+713,e0158,The Azim Steppe,The Azim Steppe
+714,e0159,Bardam's Mettle,Bardam's Mettle
+715,e0160,The Churning Mists,The Churning Mists
+716,e0161,The Peaks,The Peaks
+717,e0174,Wolves' Den Pier,Wolves' Den Pier
+718,e0175,The Azim Steppe,The Azim Steppe
+719,g3fa,Emanation,Emanation
+720,g3fa_2,Emanation,Emanation
+721,e0170,Amdapor Keep,Amdapor Keep (Hard)
+722,e0171,The Lost City of Amdapor,The Lost City of Amdapor (Hard)
+723,e0167,The Azim Steppe,The Azim Steppe
+724,z3e1,The Interdimensional Rift,The Interdimensional Rift
+725,o3c1_2,The Lost Canals of Uznair,The Lost Canals of Uznair
+726,e0166,The Ruby Sea,The Ruby Sea
+727,g3e4,The Royal Menagerie,The Royal Menagerie
+728,z1ea,Mordion Gaol,Mordion Gaol
+729,d2p1,Astragalos,Astragalos
+730,g3fc,Transparency,Transparency
+731,,0,0
+732,z3fa,Eureka Anemos,Eureka Anemos
+733,f1bz,The Binding Coil of Bahamut,The Binding Coil of Bahamut
+734,z3r1,The Royal City of Rabanastre,The Royal City of Rabanastre
+735,z3e2,The <italic(1)>Prima Vista<italic(0)> Tiring Room,The <italic(1)>Prima Vista<italic(0)> Tiring Room
+736,z3e3,The <italic(1)>Prima Vista<italic(0)> Bridge,The <italic(1)>Prima Vista<italic(0)> Bridge
+737,g3d2_event,Royal Palace,The Hall of the Griffin
+738,g3e6,The Resonatorium,The Resonatorium
+739,e3eb,The Doman Enclave,The Doman Enclave
+740,g3e4_2,The Royal Menagerie,The Royal Menagerie
+741,f1e9,Sanctum of the Twelve,Valentione's Ceremony
+742,e3d5,Hells' Lid,Hells' Lid
+743,a2d4,The Fractal Continuum,The Fractal Continuum (Hard)
+744,e3e7,Kienkan,Kienkan
+745,,0,0
+746,e3fb,The Jade Stoa,The Jade Stoa
+747,,0,0
+748,z3o7,Sigmascape V1.0,Sigmascape V1.0
+749,z3o8,Sigmascape V2.0,Sigmascape V2.0
+750,z3o9,Sigmascape V3.0,Sigmascape V3.0
+751,z3oa,Sigmascape V4.0,Sigmascape V4.0
+752,z3o7_2,Sigmascape V1.0,Sigmascape V1.0
+753,z3o8_2,Sigmascape V2.0,Sigmascape V2.0
+754,z3o9_2,Sigmascape V3.0,Sigmascape V3.0
+755,z3oa_2,Sigmascape V4.0,Sigmascape V4.0
+756,z3e5,The Interdimensional Rift,The Interdimensional Rift
+757,e0197,The Ruby Sea,The Ruby Sea
+758,e3fb_2,The Jade Stoa,The Jade Stoa
+759,e3ec,The Doman Enclave,The Doman Enclave
+760,e0198,The Fringes,The Fringes
+761,e3fc,The Great Hunt,The Great Hunt
+762,e3fc_2,The Great Hunt,The Great Hunt
+763,z3fb,Eureka Pagos,Eureka Pagos
+764,e3e8,Reisen Temple,Reisen Temple
+765,,0,0
+766,,0,0
+767,,0,0
+768,e3d6,The Swallow's Compass,The Swallow's Compass
+769,ec009,The Burn,The Burn
+770,e3c1,Heaven-on-High,0
+771,e3c2,Heaven-on-High,0
+772,e3c3,Heaven-on-High,0
+773,e3c4,Heaven-on-High,0
+774,e3c5,Heaven-on-High,0
+775,e3c6,Heaven-on-High,0
+776,z3r2,The Ridorana Lighthouse,The Ridorana Lighthouse
+777,w1fz,Ultimacy,Ultimacy
+778,e3fd,Castrum Fluminis,Castrum Fluminis
+779,e3fd_2,Castrum Fluminis,Castrum Fluminis
+780,e3ed,Heaven-on-High,Heaven-on-High
+781,e0199,Reisen Temple Road,Reisen Temple Road
+782,e3c3_2,Heaven-on-High,0
+783,e3c4_2,Heaven-on-High,0
+784,e3c5_2,Heaven-on-High,0
+785,e3c6_2,Heaven-on-High,0
+786,e3ee,Castrum Fluminis,Castrum Fluminis
+787,z3r2_event,The Ridorana Cataract,The Ridorana Cataract
+788,d2d9,Saint Mocianne's Arboretum,Saint Mocianne's Arboretum (Hard)
+789,,0,0
+790,w1t1_5th,Ul'dah - Steps of Nald,Ul'dah - Steps of Nald
+791,w1p1,Hidden Gorge,Hidden Gorge
+792,w1eg,The Fall of Belah'dia,The Fall of Belah'dia
+793,,0,0
+794,o3c2,The Shifting Altars of Uznair,The Shifting Altars of Uznair
+795,z3fc,Eureka Pyros,Eureka Pyros
+796,w1tz,Blue Sky,Blue Sky
+797,ec010,The Azim Steppe,The Azim Steppe
+798,z3oc,Psiscape V1.0,Psiscape V1.0
+799,z3od,Psiscape V2.0,Psiscape V2.0
+800,z3oe,The Interdimensional Rift,The Interdimensional Rift
+801,z3of,The Interdimensional Rift,The Interdimensional Rift
+802,z3oc_2,Psiscape V1.0,Psiscape V1.0
+803,z3od_2,Psiscape V2.0,Psiscape V2.0
+804,z3oe_2,The Interdimensional Rift,The Interdimensional Rift
+805,z3of_2,The Interdimensional Rift,The Interdimensional Rift
+806,e3ff,Kugane Ohashi,Kugane Ohashi
+807,z3e8,The Interdimensional Rift,The Interdimensional Rift
+808,z3e9,The Interdimensional Rift,The Interdimensional Rift
+809,f1d9_event,Haunted Manor,The Haunted Manor
+810,e3fe,Hells' Kier,Hells' Kier
+811,e3fe_2,Hells' Kier,Hells' Kier
+812,z3e8_2,The Interdimensional Rift,The Interdimensional Rift
+813,n4f1,Lakeland,Lakeland
+814,n4f2,Kholusia,Kholusia
+815,n4f3,Amh Araeng,Amh Araeng
+816,n4f4,Il Mheg,Il Mheg
+817,n4f5,The Rak'tika Greatwood,The Rak'tika Greatwood
+818,n4f6,The Tempest,The Tempest
+819,n4t1,The Crystarium,The Crystarium
+820,n4t2,Eulmore,Eulmore
+821,n4d2,Dohn Mheg,Dohn Mheg
+822,n4d5,Mt. Gulg,Mt. Gulg
+823,n4d3,The Qitana Ravel,The Qitana Ravel
+824,e3fg,The Wreath of Snakes,The Wreath of Snakes
+825,e3fg_2,The Wreath of Snakes,The Wreath of Snakes
+826,z3r3,The Orbonne Monastery,The Orbonne Monastery
+827,z3fd,Eureka Hydatos,Eureka Hydatos
+828,z3e2_2,The <italic(1)>Prima Vista<italic(0)> Tiring Room,The <italic(1)>Prima Vista<italic(0)> Tiring Room
+829,g3e7,Eorzean Alliance Headquarters,Eorzean Alliance Headquarters
+830,ec011,The Ghimlyt Dark,The Ghimlyt Dark
+831,w1eh,The Manderville Tables,0
+832,w1ei,The Gold Saucer,0
+833,r1fa_event2,The Howling Eye,The Howling Eye
+834,r1fa_4,The Howling Eye,The Howling Eye
+835,,0,0
+836,n4d4,Malikah's Well,Malikah's Well
+837,n4d1,Holminster Switch,Holminster Switch
+838,n4d6,Amaurot,Amaurot
+839,e0200,East Shroud,East Shroud
+840,n4d7,The Twinning,The Twinning
+841,n4d8,Akadaemia Anyder,Akadaemia Anyder
+842,l1e5,The Syrcus Trench,The Syrcus Trench
+843,n4ti,The Pendants Personal Suite,The Pendants Personal Suite
+844,n4e1,The Ocular,The Ocular
+845,n4fa,The Dancing Plague,The Dancing Plague
+846,n4fb,The Crown of the Immaculate,The Crown of the Immaculate
+847,n4fc,The Dying Gasp,The Dying Gasp
+848,n4fb_2,The Crown of the Immaculate,The Crown of the Immaculate
+849,n4g1,The Core,The Core
+850,n4g2,The Halo,The Halo
+851,n4g3,The Nereus Trench,The Nereus Trench
+852,n4g4,Atlas Peak,Atlas Peak
+853,n4g1_2,The Core,The Core
+854,n4g2_2,The Halo,The Halo
+855,n4g3_2,The Nereus Trench,The Nereus Trench
+856,n4g4_2,Atlas Peak,Atlas Peak
+857,n4gy,The Core,The Core
+858,n4fa_2,The Dancing Plague,The Dancing Plague
+859,ec012,The Confessional of Toupasa the Elder,The Confessional of Toupasa the Elder
+860,ec013,Amh Araeng,Amh Araeng
+861,e0201,Lakeland,Lakeland
+862,e0202,Lakeland,Lakeland
+863,e0203,Eulmore,Eulmore
+864,e0204,Kholusia,Kholusia
+865,e0205,Old Gridania,Old Gridania
+866,e0206,Coerthas Western Highlands,Coerthas Western Highlands
+867,e0207,Eastern La Noscea,Eastern La Noscea
+868,e0208,The Peaks,The Peaks
+869,e0209,Il Mheg,Il Mheg
+870,e0210,Kholusia,Kholusia
+871,e0211,The Rak'tika Greatwood,The Rak'tika Greatwood
+872,e0212,Amh Araeng,Amh Araeng
+873,ec014,The Dancing Plague,The Dancing Plague
+874,ec015,The Rak'tika Greatwood,The Rak'tika Greatwood
+875,ec016,The Rak'tika Greatwood,The Rak'tika Greatwood
+876,ec017,The Nabaath Mines,Amh Araeng
+877,n4f1_opening,Lakeland,Lakeland
+878,n4gz,The Empty,The Empty
+879,n4c1,The Dungeons of Lyhe Ghiah,The Dungeons of Lyhe Ghiah
+880,n4fb_event,The Crown of the Immaculate,The Crown of the Immaculate
+881,n4fc_event,The Dying Gasp,The Dying Gasp
+882,n4r1,The Copied Factory,The Copied Factory
+883,,0,0
+884,n4d9,The Grand Cosmos,The Grand Cosmos
+885,n4fd,The Dying Gasp,The Dying Gasp
+886,r1hx,The Firmament,The Firmament
+887,d2az,Liminal Space,Liminal Space
+888,e3p1,Onsal Hakair,Onsal Hakair
+889,n4e9_1,Lyhe Mheg,Lyhe Mheg
+890,n4e9_2,Lyhe Mheg,Lyhe Mheg
+891,n4e9_3,Lyhe Mheg,Lyhe Mheg
+892,n4e9_4,Lyhe Mheg,Lyhe Mheg
+893,ec018,The Imperial Palace,The Imperial Palace
+894,ec019,Lyhe Mheg,Lyhe Mheg
+895,n4e8,Excavation Tunnels,Excavation Tunnels
+896,n4r1_event,The Copied Factory,The Copied Factory
+897,n4fe,Cinder Drift,0
+898,n4da,Anamnesis Anyder,Anamnesis Anyder
+899,s1e8,The Falling City of Nym,The Falling City of Nym
+900,o1a1,The <italic(1)>Endeavor<italic(0)>,The <italic(1)>Endeavor<italic(0)>
+901,a2fx,The Diadem,The Diadem
+902,n4g5,The Gandof Thunder Plains,The Gandof Thunder Plains
+903,n4g6,Ashfall,Ashfall
+904,n4g7,The Halo,The Halo
+905,n4g8,Great Glacier,Great Glacier
+906,n4g5_2,The Gandof Thunder Plains,The Gandof Thunder Plains
+907,n4g6_2,Ashfall,Ashfall
+908,n4g7_2,The Halo,The Halo
+909,n4g8_2,Great Glacier,Great Glacier
+910,,0,0
+911,ec020,Cid's Memory,Cid's Memory
+912,n4fe_2,Cinder Drift,0
+913,n4b2,Transmission Control,Transmission Control
+914,ec021,Trial's Threshold,Trial's Threshold
+915,n4ea,Gangos,Gangos
+916,n4db,The Heroes' Gauntlet,The Heroes' Gauntlet
+917,n4r2,The Puppets' Bunker,The Puppets' Bunker
+918,n4da_event,Anamnesis Anyder,Anamnesis Anyder
+919,n4eb,Terncliff,Terncliff
+920,n4b4,Bozjan Southern Front,Bozjan Southern Front
+921,w1ef_2,Frondale's Home for Friendless Foundlings,Frondale's Home for Friendless Foundlings
+922,n4ff,The Seat of Sacrifice,The Seat of Sacrifice
+923,n4ff_2,The Seat of Sacrifice,The Seat of Sacrifice
+924,n4c2,The Shifting Oubliettes of Lyhe Ghiah,The Shifting Oubliettes of Lyhe Ghiah
+925,ec022,Terncliff Bay,Terncliff Bay
+926,ec023,Terncliff Bay,Terncliff Bay
+927,,0,0
+928,n4r2_event,The Puppets' Bunker,The Puppets' Bunker
+929,a2fx_2,The Diadem,The Diadem
+930,,0,0
+931,n4ff_event,The Seat of Sacrifice,The Seat of Sacrifice
+932,ec024,The Tempest,The Tempest
+933,d4d1,Matoya's Relict,Matoya's Relict
+934,n4fg,Castrum Marinum Drydocks,Castrum Marinum Drydocks
+935,n4fg_2,Castrum Marinum Drydocks,Castrum Marinum Drydocks
+936,n4b5,Delubrum Reginae,Delubrum Reginae
+937,n4b5_2,Delubrum Reginae,Delubrum Reginae
+938,w4d1,Paglth'an,Paglth'an
+939,a2fx_3,The Diadem,The Diadem
+940,w1ee_2,The Battlehall,The Battlehall
+941,w1ee_3,The Battlehall,The Battlehall
+942,n4g9,Sphere of Naught,Sphere of Naught
+943,n4ga,Laxan Loft,Laxan Loft
+944,n4gb,Bygone Gaol,Bygone Gaol
+945,n4gc,The Garden of Nowhere,The Garden of Nowhere
+946,n4g9_2,Sphere of Naught,Sphere of Naught
+947,n4ga_2,Laxan Loft,Laxan Loft
+948,n4gb_2,Bygone Gaol,Bygone Gaol
+949,n4gc_2,The Garden of Nowhere,The Garden of Nowhere
+950,n4fh,G-Savior Deck,G-Savior Deck
+951,n4fh_2,G-Savior Deck,G-Savior Deck
+952,m5d1,The Tower of Zot,The Tower of Zot
+953,,0,0
+954,ec025,The Navel,The Navel
+955,ec026,The Last Trace,The Last Trace
+956,k5f1,Labyrinthos,Labyrinthos
+957,m5f1,Thavnair,Thavnair
+958,m5f2,Garlemald,Garlemald
+959,u5f1,Mare Lamentorum,Mare Lamentorum
+960,u5f2,Ultima Thule,Ultima Thule
+961,n5f1,Elpis,Elpis
+962,k5t1,Old Sharlayan,Old Sharlayan
+963,m5t1,Radz-at-Han,Radz-at-Han
+964,n4b5_event,The Last Trace,The Last Trace
+965,n4gz_3,The Empty,The Empty
+966,n4r3,The Tower at Paradigm's Breach,The Tower at Paradigm's Breach
+967,n4fg_event,Castrum Marinum Drydocks,Castrum Marinum Drydocks
+968,r1fz,Medias Res,Medias Res
+969,m5d2,The Tower of Babil,The Tower of Babil
+970,m5d3,Vanaspati,Vanaspati
+971,w1ej,Lemures Headquarters,Lemures Headquarters
+972,,0,0
+973,u5d1,The Dead Ends,The Dead Ends
+974,n5d1,Ktisis Hyperboreia,Ktisis Hyperboreia
+975,n4b6,Zadnor,Zadnor
+976,u5d2,Smileton,Smileton
+977,ec027,Carteneau Flats: Borderland Ruins,Carteneau Flats: Borderland Ruins
+978,k5d1,The Aitiascope,The Aitiascope
+979,r1h1,Empyreum,Empyreum
+980,r1i1,Private Cottage - Empyreum,Private Cottage - Empyreum
+981,r1i2,Private House - Empyreum,Private House - Empyreum
+982,r1i3,Private Mansion - Empyreum,Private Mansion - Empyreum
+983,r1i4,Private Chambers - Empyreum,Private Chambers - Empyreum
+984,r1i5,Company Workshop - Empyreum,Company Workshop - Empyreum
+985,r1i6,Ingleside Apartment Lobby,Ingleside Apartment Lobby
+986,u5d3,The Stigma Dreamscape,The Stigma Dreamscape
+987,k5e1,Main Hall,Main Hall
+988,m5e1,0,0
+989,k5e2,0,0
+990,k5ti,Andron,Andron
+991,n4fh_event,G-Savior Deck,G-Savior Deck
+992,u5fa,The Dark Inside,The Dark Inside
+993,u5fa_2,The Dark Inside,The Dark Inside
+994,f1db,The Phantoms' Feast,The Phantoms' Feast
+995,k5fa,The Mothercrystal,The Mothercrystal
+996,k5fa_2,The Mothercrystal,The Mothercrystal
+997,u5fb,The Final Day,The Final Day
+998,u5fb_2,The Final Day,The Final Day
+999,r1i4_2,Ingleside Apartment,Ingleside Apartment
+1000,u5c1,The Excitatron 6000,The Excitatron 6000
+1001,r2ea,Strategy Room,Strategy Room
+1002,n5r1,The Gates of Pandæmonium,The Gates of Pandæmonium
+1003,n5r1_2,The Gates of Pandæmonium,The Gates of Pandæmonium
+1004,n5r2,The Stagnant Limbo,The Stagnant Limbo
+1005,n5r2_2,The Stagnant Limbo,The Stagnant Limbo
+1006,n5r3,The Fervid Limbo,The Fervid Limbo
+1007,n5r3_2,The Fervid Limbo,The Fervid Limbo
+1008,n5r4,The Sanguine Limbo,The Sanguine Limbo
+1009,n5r4_2,The Sanguine Limbo,The Sanguine Limbo
+1010,ec028,Magna Glacies,Magna Glacies
+1011,ec029,Garlemald,Garlemald
+1012,ec030,Magna Glacies,Magna Glacies
+1013,ec031,Beyond the Stars,Beyond the Stars
+1014,ec032,Elpis,Elpis
+1015,ec033,Central Shroud,Central Shroud
+1016,ec034,Sastasha,Sastasha
+1017,ec035,The Swallow's Compass,The Swallow's Compass
+1018,ec036,The Vault,The Vault
+1019,ec037,The Peaks,The Peaks
+1020,ec038,Cutter's Cry,Cutter's Cry
+1021,ec039,Dusk Vigil,Dusk Vigil
+1022,ec040,Saint Mocianne's Arboretum,Saint Mocianne's Arboretum
+1023,ec041,The Dravanian Forelands,The Dravanian Forelands
+1024,m5e3,The Nethergate,The Nethergate
+1025,n5r0,The Gates of Pandæmonium,The Gates of Pandæmonium
+1026,u5e1,Beyond the Stars,Beyond the Stars
+1027,u5f2_event,Ultima Thule,Ultima Thule
+1028,u5fa_event,The Dark Inside,The Dark Inside
+1029,u5fb_event,The Final Day,The Final Day
+1030,k5fa_event,The Mothercrystal,The Mothercrystal
+1031,n5e1,Propylaion,Propylaion
+1032,s5p1,The Palaistra,The Palaistra
+1033,s5p2,The Volcanic Heart,The Volcanic Heart
+1034,s5p3,Cloud Nine,Cloud Nine
+1035,,0,0
+1036,s1d1_re,Sastasha,Sastasha
+1037,f1d1_re,The Tam-Tara Deepcroft,The Tam-Tara Deepcroft
+1038,w1d1_re,Copperbell Mines,Copperbell Mines
+1039,f1r1_re,The Thousand Maws of Toto-Rak,The Thousand Maws of Toto-Rak
+1040,f1d2_re,Haukke Manor,Haukke Manor
+1041,s1d2_re,Brayflox's Longstop,Brayflox's Longstop
+1042,r1d1_re,Stone Vigil,Stone Vigil
+1043,w1d4_re,Castrum Meridianum,Castrum Meridianum
+1044,w1d5_re,The Praetorium,The Praetorium
+1045,w1fa_re,Bowl of Embers,Bowl of Embers
+1046,s1fa_re,The Navel,The Navel
+1047,r1fa_re,The Howling Eye,The Howling Eye
+1048,w1d5_battle,Porta Decumana,Porta Decumana
+1049,ec043,Western Thanalan,Western Thanalan
+1050,m5d4,Alzadaal's Legacy,Alzadaal's Legacy
+1051,ec042,The Tower of Babil,The Tower of Babil
+1052,ec044,The Porta Decumana,The Porta Decumana
+1053,w1d5_event,The Porta Decumana,The Porta Decumana
+1054,z5r1,Aglaia,Aglaia
+1055,h1m2,Unnamed Island,Unnamed Island
+1056,m5d4_event,Alzadaal's Legacy,Alzadaal's Legacy
+1057,k5e4,Restricted Archives,Restricted Archives
+1058,s5p1_ctm,The Palaistra,The Palaistra
+1059,s5p2_ctm,The Volcanic Heart,The Volcanic Heart
+1060,s5p3_ctm,Cloud Nine,Cloud Nine
+1061,z5e1,The Omphalos,The Omphalos
+1062,r1d3_re,Snowcloak,Snowcloak
+1063,l1d1_re,The Keeper of the Lake,The Keeper of the Lake
+1064,d2d1_re,Sohm Al,Sohm Al Foothills
+1065,d2d2_re,The Aery,The Aery
+1066,r2d2_re,The Vault,The Vault
+1067,f1fa_re,Thornmarch,Thornmarch
+1068,ec045,Steps of Faith,Steps of Faith
+1069,w5d1,The Sil'dihn Subterrane,The Sil'dihn Subterrane
+1070,z5d1,The Fell Court of Troia,The Fell Court of Troia
+1071,z5fa,Storm's Crown,Storm's Crown
+1072,z5fa_2,Storm's Crown,Storm's Crown
+1073,u5e3,Elysion,Elysion
+1074,,0,0
+1075,w5d2,Another Sil'dihn Subterrane,Another Sil'dihn Subterrane
+1076,w5d2_2,Another Sil'dihn Subterrane,Another Sil'dihn Subterrane
+1077,z5e4,Zero's Domain,Zero's Domain
+1078,m5e4,Meghaduta Guest Chambers,Meghaduta Guest Chambers
+1079,k5e5,The Aitiascope,The Aitiascope
+1080,,0,0
+1081,n5r5,The Caustic Purgatory,The Caustic Purgatory
+1082,n5r5_2,The Caustic Purgatory,The Caustic Purgatory
+1083,n5r6,The Pestilent Purgatory,The Pestilent Purgatory
+1084,n5r6_2,The Pestilent Purgatory,The Pestilent Purgatory
+1085,n5r7,The Hollow Purgatory,The Hollow Purgatory
+1086,n5r7_2,The Hollow Purgatory,The Hollow Purgatory
+1087,n5r8,Stygian Insenescence Cells,Stygian Insenescence Cells
+1088,n5r8_2,Stygian Insenescence Cells,Stygian Insenescence Cells
+1089,z5d1_event,The Fell Court of Troia,The Fell Court of Troia
+1090,,0,0
+1091,ec046,The Fell Court of Troia,The Fell Court of Troia
+1092,z5fa_event,Storm's Crown,Storm's Crown
+1093,n5r8_event,Stygian Insenescence Cells,Stygian Insenescence Cells
+1094,f1ea,Sneaky Hollow,Sneaky Hollow
+1095,m5fa,Mount Ordeals,Mount Ordeals
+1096,m5fa_2,Mount Ordeals,Mount Ordeals
+1097,m5d5,Lapis Manalis,Lapis Manalis
+1098,f1eb,Sylphstep,Sylphstep
+1099,l5c1,Eureka Orthos,0
+1100,l5c2,Eureka Orthos,0
+1101,l5c3,Eureka Orthos,0
+1102,l5c3_2,Eureka Orthos,0
+1103,l5c4,Eureka Orthos,0
+1104,l5c4_2,Eureka Orthos,0
+1105,l5c5,Eureka Orthos,0
+1106,l5c5_2,Eureka Orthos,0
+1107,l5c6,Eureka Orthos,0
+1108,l5c6_2,Eureka Orthos,0
+1109,d2d3_re,The Great Gubal Library,The Great Gubal Library
+1110,a2d1_re,Aetherochemical Research Facility,Aetherochemical Research Facility
+1111,d2d5_re,The Antitower,The Antitower
+1112,d2d6_re,Sohr Khai,Sohr Khai
+1113,r2d3_re,Xelphatol,Xelphatol
+1114,f1da_re,Baelsar's Wall,Baelsar's Wall
+1115,ec047,The Tower of Babil,The Tower of Babil
+1116,s5p4,The Clockwork Castletown,The Clockwork Castletown
+1117,s5p4_ctm,The Clockwork Castletown,The Clockwork Castletown
+1118,z5r2,Euphrosyne,Euphrosyne
+1119,m5d5_event,Lapis Manalis,Lapis Manalis
+1120,ec048,Garlemald,Garlemald
+1121,,0,0
+1122,z3oz,The Interdimensional Rift,The Interdimensional Rift
+1123,n5c1,The Shifting Gymnasion Agonon,The Shifting Gymnasion Agonon
+1124,l5c0,Eureka Orthos,Eureka Orthos
+1125,m5e6,Khadga,Khadga
+1126,k5d2,The Aetherfont,The Aetherfont
+1127,s1p6_begin01,The Fold,The Fold
+1128,s1p6_begin02,The Fold,The Fold
+1129,s1p6_begin03,The Fold,The Fold
+1130,,0,0
+1131,,0,0
+1132,,0,0
+1133,,0,0
+1134,,0,0
+1135,,0,0
+1136,m5fb,The Gilded Araya,The Gilded Araya
+1137,e5d1,Mount Rokkon,Mount Rokkon
+1138,s5p5,The Red Sands,The Red Sands
+1139,s5p5_ctm,The Red Sands,The Red Sands
+1140,z5fb,The Voidcast Dais,The Voidcast Dais
+1141,z5fb_2,The Voidcast Dais,The Voidcast Dais
+1142,o3d1_re,The Sirensong Sea,The Sirensong Sea
+1143,e3d2_re,Bardam's Mettle,Bardam's Mettle
+1144,e3d3_re,Doma Castle,Doma Castle
+1145,g3d1_re,Castrum Abania,Castrum Abania
+1146,g3d2_re,Ala Mhigo,Ala Mhigo
+1147,n5r9,The Aetherial Slough,The Aetherial Slough
+1148,n5r9_2,The Aetherial Slough,The Aetherial Slough
+1149,n5ra,The Dæmons' Nest,The Dæmons' Nest
+1150,n5ra_2,The Dæmons' Nest,The Dæmons' Nest
+1151,n5rb,The Chamber of Fourteen,The Chamber of Fourteen
+1152,n5rb_2,The Chamber of Fourteen,The Chamber of Fourteen
+1153,n5rc,Ascension,Ascension
+1154,n5rc_2,Ascension,Ascension
+1155,e5d2,Another Mount Rokkon,Another Mount Rokkon
+1156,e5d2_2,Another Mount Rokkon,Another Mount Rokkon
+1157,,0,0
+1158,n5ra_event,The Dæmons' Nest,The Dæmons' Nest
+1159,z5fb_event,The Voidcast Dais,The Voidcast Dais
+1160,m5e7,Senatus,Senatus
+1161,m5e5,Estinien's Chambers,Estinien's Chambers
+1162,z5e5,The Red Moon,The Red Moon
+1163,o1a2,The <italic(1)>Endeavor<italic(0)>,The <italic(1)>Endeavor<italic(0)>
+1164,z5d2,The Lunar Subterrane,The Lunar Subterrane
+1165,w1ek,Blunderville,Blunderville
+1166,w1fd,The Memory of Embers,The Memory of Embers
+1167,y6d1,Ihuykatumu,Ihuykatumu
+1168,z5fc,The Abyssal Fracture,The Abyssal Fracture
+1169,z5fc_2,The Abyssal Fracture,The Abyssal Fracture
+1170,y6e1,Sunperch,Sunperch
+1171,x6e1,Earthen Sky Hideout,Earthen Sky Hideout
+1172,g3d4_re,The Drowned City of Skalla,The Drowned City of Skalla
+1173,e3d7_re,The Burn,The Burn
+1174,g3d5_re,The Ghimlyt Dark,The Ghimlyt Dark
+1175,,0,0
+1176,o5d1,Aloalo Island,Aloalo Island
+1177,ec049,The Aetherfont,The Aetherfont
+1178,z5r3,Thaleia,Thaleia
+1179,o5d2,Another Aloalo Island,Another Aloalo Island
+1180,o5d2_2,Another Aloalo Island,Another Aloalo Island
+1181,z5fc_event,The Abyssal Fracture,The Abyssal Fracture
+1182,z5r3_event,Thaleia,Thaleia
+1183,m5fb_event,The Gilded Araya,The Gilded Araya
+1184,z5d2_event,The Lunar Subterrane,The Lunar Subterrane
+1185,y6t1,Tuliyollal,Tuliyollal
+1186,x6t1,Solution Nine,Solution Nine
+1187,y6f1,Urqopacha,Urqopacha
+1188,y6f2,Kozama'uka,Kozama'uka
+1189,y6f3,Yak T'el,Yak T'el
+1190,x6f1,Shaaloani,Shaaloani
+1191,x6f2,Heritage Found,Heritage Found
+1192,x6f3,Living Memory,Living Memory
+1193,y6d2,Worqor Zormor,Worqor Zormor
+1194,y6d3,The Skydeep Cenote,The Skydeep Cenote
+1195,y6fa,Worqor Lar Dor,Worqor Lar Dor
+1196,y6fa_2,Worqor Lar Dor,Worqor Lar Dor
+1197,w1el,Blunderville Square,Blunderville Square
+1198,x6d1,Vanguard,Vanguard
+1199,x6d3,Alexandria,Alexandria
+1200,x6fa,Summit of Everkeep,Summit of Everkeep
+1201,x6fa_2,Summit of Everkeep,Summit of Everkeep
+1202,x6fb,Interphos,Interphos
+1203,x6d4,Tender Valley,Tender Valley
+1204,x6d5,Strayborough,Strayborough
+1205,y6ti,The For'ard Cabins,The For'ard Cabins
+1206,y6e3,Main Deck,Main Deck
+1207,x6e2,The Backroom,The Backroom
+1208,x6d2,Origenics,Origenics
+1209,y6c1,Cenote Ja Ja Gural,Cenote Ja Ja Gural
+1210,ec050,Sunperch,Sunperch
+1211,ec051,Yak T'el,Yak T'el
+1212,ec052,Yak T'el,Yak T'el
+1213,ec053,Solution Nine,Solution Nine
+1214,ec054,The Sea of Clouds,The Sea of Clouds
+1215,ec055,Brayflox's Longstop,Brayflox's Longstop
+1216,ec056,Bardam's Mettle,Bardam's Mettle
+1217,ec057,Ala Mhigo,The Hall of the Griffin
+1218,ec058,Khadga,Khadga
+1219,x6d1_event,Vanguard,Vanguard
+1220,x6fa_event,Summit of Everkeep,Summit of Everkeep
+1221,x6fb_event,Interphos,Interphos
+1222,y6e2,Skydeep Cenote Inner Chamber,Skydeep Cenote Inner Chamber
+1223,x6e4,Tritails Training,Tritails Training
+1224,x6e5,Greenroom,Greenroom
+1225,x6r1,Scratching Ring,Scratching Ring
+1226,x6r1_2,Scratching Ring,Scratching Ring
+1227,x6r2,Lovely Lovering,Lovely Lovering
+1228,x6r2_2,Lovely Lovering,Lovely Lovering
+1229,x6r3,Blasting Ring,Blasting Ring
+1230,x6r3_2,Blasting Ring,Blasting Ring
+1231,x6r4,The Thundering,The Thundering
+1232,x6r4_2,The Thundering,The Thundering
+1233,ec059,Manor Basement,Manor Basement
+1234,ec060,Dreamlike Palace,Dreamlike Palace
+1235,ec061,Central Thanalan,Central Thanalan
+1236,ec062,Southern Thanalan,Southern Thanalan
+1237,c1w1,Sinus Ardorum,Sinus Ardorum
+1238,n4gw,A Future Rewritten,A Future Rewritten
+1239,,0,0
+1240,,0,0
+1241,l1rz,Sphere of Naught,Sphere of Naught
+1242,x6d6,Yuweyawata,Yuweyawata
+1243,x6fc,Interphos,Interphos
+1244,ec063,Shaaloani,Shaaloani
+1245,w1d2_re,Halatali,Halatali
+1246,ec064,Zorgor the Boundless,Zorgor the Boundless
+1247,f1ec,Starlight Stalls,Starlight Stalls
+1248,z6r1,Jeuno: The First Walk,Jeuno: The First Walk
+1249,h1i1,0,0
+1250,h1i2,0,0
+1251,h1i3,0,0
+1252,o6b1,South Horn,South Horn
+1253,f1ec_2,Starlight Stalls,Starlight Stalls
+1254,x6d6_event,Yuweyawata,Yuweyawata
+1255,w1em,Hall of the Unbound,Hall of the Unbound
+1256,x6r5,Groovy Ring,Groovy Ring
+1257,x6r5_2,Groovy Ring,Groovy Ring
+1258,x6r6,Rebel Ring,Rebel Ring
+1259,x6r6_2,Rebel Ring,Rebel Ring
+1260,x6r7,Demolition Site,Demolition Site
+1261,x6r7_2,Demolition Site,Demolition Site
+1262,x6r8,Hunter's Ring,Hunter's Ring
+1263,x6r8_2,Hunter's Ring,Hunter's Ring
+1264,z6e1,Lower Jeuno,Lower Jeuno
+1265,z6e1_2,Lower Jeuno,Lower Jeuno
+1266,x6d7,The Underkeep,The Underkeep
+1267,w1d3_re,The Sunken Temple of Qarn,The Sunken Temple of Qarn
+1268,x6e8,Break Room,Break Room
+1269,o6e1,Phantom Village,Phantom Village
+1270,x6fd,Recollection,Recollection
+1271,x6fd_2,Recollection,Recollection
+1272,,0,0
+1273,l1p3,Carteneau Flats: Borderland Ruins,Carteneau Flats: Borderland Ruins
+1274,x6e9,Throne Room,Throne Room
+1275,x6fd_event,Recollection,Recollection
+1276,x6r7_event,Demolition Site,Demolition Site
+1277,o6e2,Main Deck,Main Deck
+1278,o6e1_2,Phantom Village,Phantom Village
+1279,x6c1,Vault Oneiron,Vault Oneiron
+1280,n6c0,Pilgrim's Traverse,Pilgrim's Traverse
+1281,n6c1,Pilgrim's Traverse,0
+1282,n6c2,Pilgrim's Traverse,0
+1283,n6c3,Pilgrim's Traverse,0
+1284,n6c3_2,Pilgrim's Traverse,0
+1285,n6c4,Pilgrim's Traverse,0
+1286,n6c4_2,Pilgrim's Traverse,0
+1287,n6c5,Pilgrim's Traverse,0
+1288,n6c5_2,Pilgrim's Traverse,0
+1289,n6c6,Pilgrim's Traverse,0
+1290,n6c6_2,Pilgrim's Traverse,0
+1291,c1w2,Phaenna,Phaenna
+1292,x6d8,The Meso Terminal,The Meso Terminal
+1293,s5p6,The Bayside Battleground,The Bayside Battleground
+1294,s5p6_ctm,The Bayside Battleground,The Bayside Battleground
+1295,x6fe,The Ageless Necropolis,The Ageless Necropolis
+1296,x6fe_2,The Ageless Necropolis,The Ageless Necropolis
+1297,y6e5,Zirgorteh the Open-armed,Zirgorteh the Open-armed
+1298,f1dd,The Pâtisserie,The Pâtisserie
+1299,x6eb,Containment Complex 10-29,Containment Complex 10-29
+1300,x6ff,The Windward Wilds,The Windward Wilds
+1301,x6ff_event,The Windward Wilds,The Windward Wilds
+1302,,0,0
+1303,w1r1_re,Cutter's Cry,Cutter's Cry
+1304,z6r2,San d'Oria: The Second Walk,San d'Oria: The Second Walk
+1305,f1d9_event2,Haunted Manor,The Haunted Manor
+1306,x6ff_2,The Windward Wilds,The Windward Wilds
+1307,x6fg,Hell on Rails,Hell on Rails
+1308,x6fg_2,Hell on Rails,Hell on Rails
+1309,f1ec_3,Starlight Stalls,Starlight Stalls
+1310,c1w3,Oizys,Oizys
+1311,n6c6_3,Pilgrim's Traverse,0
+1312,x6fe_event,The Ageless Necropolis,The Ageless Necropolis
+1313,y6p1,Worqor Chirteh,Worqor Chirteh
+1314,x6d9,Mistwake,Mistwake
+1315,m6d1,<italic(1)>The Merchant's Tale<italic(0)>,<italic(1)>The Merchant's Tale<italic(0)>
+1316,m6d1_2,<italic(1)>The Merchant's Tale<italic(0)>,<italic(1)>The Merchant's Tale<italic(0)>
+1317,m6d1_3,Another Merchant's Tale,<italic(1)>The Merchant's Tale<italic(0)>
+1318,,0,0
+1319,c1w4,Auxesia,Auxesia
+1320,x6r9,Ring Noir,Ring Noir
+1321,x6r9_2,Ring Noir,Ring Noir
+1322,x6ra,The X-Ring,The X-Ring
+1323,x6ra_2,The X-Ring,The X-Ring
+1324,x6rb,The Crown,The Crown
+1325,x6rb_2,The Crown,The Crown
+1326,x6rc,Arcadia,Arcadia
+1327,x6rc_2,Arcadia,Arcadia
+1328,ec065,Treno,Treno
+1329,ec066,Kanilokka Corpus Substructure,Kanilokka Corpus Substructure
+1330,r1r1_re,Dzemael Darkhold,Dzemael Darkhold
+1331,r1r2_re,Aurum Vale,Aurum Vale
+1332,x6d9_event,Treno,Treno
+1333,n6c6_4,Pilgrim's Traverse,0
+1334,x6ed,Alexandria Crater,Alexandria Crater
+1335,s1e9,The Gold Saucer,0
+1336,f1ed,Lilyswim,0
+1337,m6e1,The Maiden's Home,The Maiden's Home
+1338,x6ee,Bentini Depot,Bentini Depot
+1339,,0,0
+1340,,0,0
+1341,,0,0
+1342,,0,0
+1343,,0,0
+1344,x6ef,Tritails Training,Tritails Training
+1345,m6d2,The Clyteum,The Clyteum
+1346,o6b2,North Horn,North Horn
+1347,,0,0
+1348,,0,0
+1349,,0,0
+1350,,0,0
+1351,,0,0
+1352,,0,0
+1353,,0,0
+1354,,0,0
+1355,,0,0
+1356,,0,0
+1357,s5p7,Archeia Harmonias,Archeia Harmonias
+1358,s5p7_ctm,Archeia Harmonias,Archeia Harmonias
+1359,w1en,The Gold Saucer,0
+1360,w1eo,Keybound Square,Keybound Square
+1361,z5fd,The Unmaking,The Unmaking
+1362,z5fd_2,The Unmaking,The Unmaking
+1363,z3oy,Sigmascape V4.0,Sigmascape V4.0
+1364,,0,0
+1365,,0,0
+1366,r2d1_re,Dusk Vigil,Dusk Vigil
+1367,e3d1_re,Shisui of the Violet Tides,Shisui of the Violet Tides
+1368,z6r3,Windurst: The Third Walk,Windurst: The Third Walk
+1369,f1de,The Phantoms' Feast,The Phantoms' Feast
+1370,f1de_2,The Phantoms' Feast,The Phantoms' Feast
+1371,,0,0
+1372,g3fc_3,Transparency,Transparency
+1373,z5fd_event,The Unmaking,The Unmaking
+1374,h2i1,0,0
+1375,h2i2,0,0
+1376,h2i3,0,0
+1377,,0,0
+1378,,0,0
+1379,,0,0
+1380,,0,0
+1381,,0,0
+1382,,0,0
+1383,,0,0
+1384,f1ec_4,Starlight Stalls,Starlight Stalls
+1385,,0,0
+1386,,0,0
+1387,,0,0
+1388,,0,0
+1389,,0,0

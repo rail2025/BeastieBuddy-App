@@ -18,8 +18,18 @@
     "core:webview:allow-internal-toggle-devtools",
     "core:window:allow-set-title",
     "opener:default",
-    "fs:allow-applocaldata-read",
-    "fs:allow-applocaldata-write",
-    "fs:allow-mkdir"
+    "fs:allow-applocaldata-read-recursive",
+    "fs:allow-applocaldata-write-recursive",
+    "fs:allow-applocaldata-meta-recursive",
+    "fs:allow-mkdir",
+    "fs:allow-exists",
+    "fs:scope-applocaldata-recursive",
+    {
+      "identifier": "fs:scope",
+      "allow": [
+        { "path": "$APPLOCALDATA/BeastieBuddy_Map_Download_Cache/**" },
+        { "path": "$APPLOCALDATA/*" }
+      ]
+    }
   ]
 }

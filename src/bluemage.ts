@@ -35,7 +35,7 @@ function setupEventListeners() {
   document.querySelectorAll('input[name="blu-filter"]').forEach(r => {
     r.addEventListener('change', renderList);
   });
-  document.getElementById('blu-search')?.addEventListener('input', renderList);
+  getUIElement('blu-search').addEventListener('input', renderList);
 }
 
 import { getUIElement, Spell } from './core-definitions.ts';
@@ -88,7 +88,7 @@ function renderList() {
 }
 
 function showDetails(spell: any) {
-  const rightPane = document.getElementById('blu-right')!;
+  const rightPane = getUIElement('blu-right');
   rightPane.classList.remove('hidden');
 
   let sourcesHtml = '';

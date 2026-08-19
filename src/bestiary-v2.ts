@@ -122,7 +122,7 @@ export async function initBestiaryV2(container: HTMLElement) {
 
 function buildFilters() {
   const buildCol = (id: string, items: string[]) => {
-    const col = document.getElementById(id)!;
+    const col = getUIElement(id);
     items.forEach(item => {
       col.insertAdjacentHTML('beforeend', `<label><input type="checkbox" value="${item}"> ${item}</label>`);
     });
@@ -137,30 +137,30 @@ function setupEventListeners() {
     r.addEventListener('change', () => { currentPage = 1; renderData(); });
   });
 
-  const searchInput = document.getElementById('bestiary-search') as HTMLInputElement;
+  const searchInput = getUIElement<HTMLInputElement>('bestiary-search');
   searchInput.addEventListener('input', () => { currentPage = 1; renderData(); });
 
-  document.getElementById('b-btn-prev')?.addEventListener('click', () => {
+  getUIElement('b-btn-prev').addEventListener('click', () => {
     if (currentPage > 1) { currentPage--; renderData(); }
   });
-  document.getElementById('b-btn-next')?.addEventListener('click', () => {
+  getUIElement('b-btn-next').addEventListener('click', () => {
     const totalPages = Math.ceil(getFilteredData().length / itemsPerPage) || 1;
     if (currentPage < totalPages) { currentPage++; renderData(); }
   });
 
-  const filterPopup = document.getElementById('b-filter-popup')!;
-  document.getElementById('btn-b-filters')?.addEventListener('click', () => {
+  const filterPopup = getUIElement('b-filter-popup');
+  getUIElement('btn-b-filters').addEventListener('click', () => {
     filterPopup.classList.toggle('hidden');
   });
 
-  document.getElementById('b-btn-reset-filters')?.addEventListener('click', () => {
+  getUIElement('b-btn-reset-filters').addEventListener('click', () => {
     activeFilters.clear();
     document.querySelectorAll('.b-filter-grid input[type="checkbox"]').forEach(cb => (cb as HTMLInputElement).checked = false);
     currentPage = 1;
     renderData();
   });
 
-  document.getElementById('b-btn-apply-filters')?.addEventListener('click', () => {
+  getUIElement('b-btn-apply-filters').addEventListener('click', () => {
     activeFilters.clear();
     document.querySelectorAll('.b-filter-grid input[type="checkbox"]:checked').forEach(cb => {
       activeFilters.add((cb as HTMLInputElement).value.toLowerCase());
@@ -208,7 +208,7 @@ function updateProgress() {
 
 function getFilteredData() {
   const filterMode = (document.querySelector('input[name="b-filter"]:checked') as HTMLInputElement).value;
-  const filterText = (document.getElementById('bestiary-search') as HTMLInputElement).value.toLowerCase();
+  const filterText = getUIElement<HTMLInputElement>('bestiary-search').value.toLowerCase();
 
   return allBeasts.filter(b => {
     if (filterMode === 'captured' && !capturedSet.has(b.id)) return false;
@@ -232,12 +232,12 @@ function getFilteredData() {
 }
 
 function renderData() {
-  const leftPane = document.getElementById('bestiary-left')!;
+  const leftPane = getUIElement('bestiary-left');
   const filtered = getFilteredData();
   
   const totalPages = Math.ceil(filtered.length / itemsPerPage) || 1;
   if (currentPage > totalPages) currentPage = totalPages;
-  document.getElementById('b-page-info')!.textContent = `Page ${currentPage}/${totalPages}`;
+  getUIElement('b-page-info').textContent = `Page ${currentPage}/${totalPages}`;
 
   const startIdx = (currentPage - 1) * itemsPerPage;
   const pageData = filtered.slice(startIdx, startIdx + itemsPerPage);
@@ -293,7 +293,7 @@ function renderData() {
 
       if (el.classList.contains('selected')) {
         el.classList.remove('selected');
-        document.getElementById('bestiary-right')?.classList.add('hidden');
+        getUIElement('bestiary-right').classList.add('hidden');
         if (isExpanded) {
           await appWindow.setSize(new LogicalSize(460, 600));
           isExpanded = false;
@@ -304,7 +304,7 @@ function renderData() {
       document.querySelectorAll('.b-list-item, .b-card-item').forEach(i => i.classList.remove('selected'));
       el.classList.add('selected');
       
-      document.getElementById('bestiary-right')?.classList.remove('hidden');
+      getUIElement('bestiary-right').classList.remove('hidden');
       if (!isExpanded) {
         await appWindow.setSize(new LogicalSize(950, 940));
         isExpanded = true;
@@ -317,8 +317,8 @@ function renderData() {
 }
 
 function showBestiaryDetails(id: string, beast: any, colorClass: string, iconHtml: string) {
-  document.getElementById('bestiary-placeholder')?.classList.add('hidden');
-  const details = document.getElementById('bestiary-details')!;
+  getUIElement('bestiary-placeholder').classList.add('hidden');
+  const details = getUIElement('bestiary-details');
   details.classList.remove('hidden');
 
   details.innerHTML = `
@@ -338,13 +338,11 @@ function showBestiaryDetails(id: string, beast: any, colorClass: string, iconHtm
     <div class="b-ability-desc">${highlightKeywords(beast.PartingBlow?.Effect || '')}</div>
   `;
 
-  document.getElementById('b-btn-spawn')?.addEventListener('click', () => {
-    const searchTab = document.getElementById('tab-search');
-    const searchInput = document.getElementById('search-input') as HTMLInputElement;
-    if (searchTab && searchInput) {
-      searchTab.click();
-      searchInput.value = beast.Name;
-      searchInput.dispatchEvent(new Event('input', { bubbles: true }));
-    }
+  getUIElement('b-btn-spawn').addEventListener('click', () => {
+    const searchTab = getUIElement('tab-search');
+    const searchInput = getUIElement<HTMLInputElement>('search-input');
+    searchTab.click();
+    searchInput.value = beast.Name;
+    searchInput.dispatchEvent(new Event('input', { bubbles: true }));
   });
 }

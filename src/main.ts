@@ -26,12 +26,12 @@ loadSaveData().then(async (data) => {
   currentTheme = data.settings.theme || "dark";
   
   document.documentElement.setAttribute('data-theme', currentTheme);
-  document.getElementById('app')!.style.opacity = currentOpacity;
+  getUIElement('app').style.opacity = currentOpacity;
   opacitySlider.value = currentOpacity;
   
   await appWindow.setAlwaysOnTop(isPinned);
-  const pinBtn = document.getElementById('btn-pin');
-  if (pinBtn) pinBtn.style.opacity = isPinned ? '1' : '0.5';
+  const pinBtn = getUIElement('btn-pin');
+  pinBtn.style.opacity = isPinned ? '1' : '0.5';
 });
 
 searchInput.value = '';
@@ -42,18 +42,18 @@ titlebar.addEventListener('mousedown', (e) => {
   }
 });
 
-document.getElementById('btn-theme')?.addEventListener('click', () => {
+getUIElement('btn-theme').addEventListener('click', () => {
   currentTheme = currentTheme === 'dark' ? 'light' : 'dark';
   document.documentElement.setAttribute('data-theme', currentTheme);
   saveSettingsData({ opacity: currentOpacity, pinned: isPinned, theme: currentTheme });
 });
 
-document.getElementById('btn-minimize')?.addEventListener('click', () => appWindow.minimize());
-document.getElementById('btn-close')?.addEventListener('click', () => appWindow.close());
+getUIElement('btn-minimize').addEventListener('click', () => appWindow.minimize());
+getUIElement('btn-close').addEventListener('click', () => appWindow.close());
 
 listen<{ opacity: string, pinned: boolean, theme: string }>('update-settings', async (event) => {
   currentOpacity = event.payload.opacity;
-  document.getElementById('app')!.style.opacity = currentOpacity;
+  getUIElement('app').style.opacity = currentOpacity;
   opacitySlider.value = currentOpacity;
   
   currentTheme = event.payload.theme;
@@ -61,13 +61,13 @@ listen<{ opacity: string, pinned: boolean, theme: string }>('update-settings', a
 
   isPinned = event.payload.pinned;
   await appWindow.setAlwaysOnTop(isPinned);
-  const pinBtn = document.getElementById('btn-pin');
-  if (pinBtn) pinBtn.style.opacity = isPinned ? '1' : '0.5';
+  const pinBtn = getUIElement('btn-pin');
+  pinBtn.style.opacity = isPinned ? '1' : '0.5';
   
   saveSettingsData({ opacity: currentOpacity, pinned: isPinned, theme: currentTheme });
 });
 
-document.getElementById('btn-pin')?.addEventListener('click', async (e) => {
+getUIElement('btn-pin').addEventListener('click', async (e) => {
   isPinned = !isPinned;
   await appWindow.setAlwaysOnTop(isPinned);
   const target = e.target as HTMLElement;
@@ -103,7 +103,7 @@ document.addEventListener('click', (e) => {
 
 opacitySlider.addEventListener('input', (e) => {
   currentOpacity = (e.target as HTMLInputElement).value;
-  document.getElementById('app')!.style.opacity = currentOpacity;
+  getUIElement('app').style.opacity = currentOpacity;
 });
 
 opacitySlider.addEventListener('change', () => {
@@ -169,46 +169,8 @@ searchInput.addEventListener('input', (e) => {
         resultsContainer.appendChild(row);
 
         row.addEventListener('click', async () => {
-          const mapData = {
-            x: itemX,
-            y: itemY,
-            zone: itemZone,
-            pinned: isPinned,
-            opacity: currentOpacity
-          };
-
-        
-        const existingMap = await WebviewWindow.getByLabel('map-window');
-
-        if (existingMap) {
-            await existingMap.setTitle(`Map - ${item.Zone}`);
-            await existingMap.setAlwaysOnTop(isPinned);
-            await existingMap.emit('map-update', mapData);
-          return;
-        }
-
-        const pos = await appWindow.outerPosition();
-        const size = await appWindow.outerSize();
-
-        new WebviewWindow('map-window', {
-            url:
-              `map.html?x=${item.X}` +
-              `&y=${item.Y}` +
-              `&pinned=${isPinned}` +
-              `&opacity=${currentOpacity}` +
-              `&zone=${encodeURIComponent(item.Zone)}`,
-            title: `Map - ${item.Zone}`,
-            width: 500,
-            height: 530,
-            x: pos.x + size.width + 10,
-            y: pos.y,
-            decorations: false,
-            transparent: true,
-            parent: appWindow.label,
-            alwaysOnTop: isPinned
+          await openMapWindow(itemX, itemY, itemZone);
         });
-        
-      });
 
       }
     } catch (error: any) {
@@ -218,6 +180,34 @@ searchInput.addEventListener('input', (e) => {
     }
   }, 500);
 });
+
+async function openMapWindow(x: number, y: number, zone: string) {
+  const mapData = { x, y, zone, pinned: isPinned, opacity: currentOpacity };
+  const existingMap = await WebviewWindow.getByLabel('map-window');
+
+  if (existingMap) {
+    await existingMap.setTitle(`Map - ${zone}`);
+    await existingMap.setAlwaysOnTop(isPinned);
+    await existingMap.emit('map-update', mapData);
+    return;
+  }
+
+  const pos = await appWindow.outerPosition();
+  const size = await appWindow.outerSize();
+
+  new WebviewWindow('map-window', {
+    url: `map.html?x=${x}&y=${y}&pinned=${isPinned}&opacity=${currentOpacity}&zone=${encodeURIComponent(zone)}`,
+    title: `Map - ${zone}`,
+    width: 500,
+    height: 530,
+    x: pos.x + size.width + 10,
+    y: pos.y,
+    decorations: false,
+    transparent: true,
+    parent: appWindow.label,
+    alwaysOnTop: isPinned
+  });
+}
 
 async function toggleWindow(label: string, url: string, title: string, width: number, height: number) {
   const existing = await WebviewWindow.getByLabel(label);
@@ -235,54 +225,25 @@ async function toggleWindow(label: string, url: string, title: string, width: nu
   });
 }
 
-document.getElementById('btn-settings')?.addEventListener('click', () => {
+getUIElement('btn-settings').addEventListener('click', () => {
   toggleWindow('settings-window', `settings.html?opacity=${currentOpacity}&pinned=${isPinned}&theme=${currentTheme}`, 'Configuration', 340, 210);
 });
 
-document.getElementById('btn-about')?.addEventListener('click', () => {
+getUIElement('btn-about').addEventListener('click', () => {
   toggleWindow('about-window', 'about.html', 'About BeastieBuddy', 380, 280);
 });
 
-const viewSearch = document.getElementById('view-search') as HTMLElement;
-const viewBestiaryV2 = document.getElementById('view-bestiary-v2') as HTMLElement;
-const viewBlu = document.getElementById('view-blu') as HTMLElement;
+const viewSearch = getUIElement('view-search');
+const viewBestiaryV2 = getUIElement('view-bestiary-v2');
+const viewBlu = getUIElement('view-blu');
 const tabs = document.querySelectorAll('#tabs button');
 
 window.addEventListener('open-map', async (e: any) => {
   const { x, y, zone } = e.detail;
-  const mapData = { x, y, zone, pinned: isPinned, opacity: currentOpacity };
-  const existingMap = await WebviewWindow.getByLabel('map-window');
-
-  if (existingMap) {
-    await existingMap.setTitle(`Map - ${zone}`);
-    await existingMap.setAlwaysOnTop(isPinned);
-    await existingMap.emit('map-update', mapData);
-    return;
-  }
-
-  const pos = await appWindow.outerPosition();
-  const size = await appWindow.outerSize();
-
-  new WebviewWindow('map-window', {
-    url: 
-      `map.html?x=${x}` +
-      `&y=${y}` +
-      `&pinned=${isPinned}` +
-      `&opacity=${currentOpacity}` +
-      `&zone=${encodeURIComponent(zone)}`,
-    title: `Map - ${zone}`,
-    width: 500,
-    height: 530,
-    x: pos.x + size.width + 10,
-    y: pos.y,
-    decorations: false,
-    transparent: true,
-    parent: appWindow.label,
-    alwaysOnTop: isPinned
-  });
+  await openMapWindow(x, y, zone);
 });
 
-document.getElementById('tab-search')?.addEventListener('click', async (e) => {
+getUIElement('tab-search').addEventListener('click', async (e) => {
   tabs.forEach(t => t.classList.remove('active'));
   (e.target as HTMLElement).classList.add('active');
   viewSearch.classList.remove('hidden');
@@ -291,7 +252,7 @@ document.getElementById('tab-search')?.addEventListener('click', async (e) => {
   await appWindow.setSize(new LogicalSize(600, 400));
 });
 
-document.getElementById('tab-blu')?.addEventListener('click', async (e) => {
+getUIElement('tab-blu').addEventListener('click', async (e) => {
   await appWindow.setSize(new LogicalSize(900, 750));
   tabs.forEach(t => t.classList.remove('active'));
   (e.target as HTMLElement).classList.add('active');
@@ -305,11 +266,8 @@ document.getElementById('tab-blu')?.addEventListener('click', async (e) => {
   }
 });
 
-document.getElementById('tab-bestiary')?.addEventListener('click', async () => {
-  await appWindow.setSize(new LogicalSize(600, 400));
-});
 
-document.getElementById('tab-bestiary-v2')?.addEventListener('click', async (e) => {
+getUIElement('tab-bestiary-v2').addEventListener('click', async (e) => {
   await appWindow.setSize(new LogicalSize(950, 700));
   tabs.forEach(t => t.classList.remove('active'));
   (e.target as HTMLElement).classList.add('active');

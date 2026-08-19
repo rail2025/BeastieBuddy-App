@@ -92,3 +92,35 @@
     [class^="kw-"] {
     text-decoration: underline;
     }
+
+    [data-theme="light"] #view-bestiary-v2, 
+    [data-theme="light"] #bestiary-right { background-color: transparent; }
+    [data-theme="light"] .b-search-filter input { background-color: var(--panel-bg); color: var(--text-main); border-color: var(--panel-border); }
+    [data-theme="light"] .b-search-filter button, [data-theme="light"] .b-page-controls button, [data-theme="light"] .btn-spawn { background-color: var(--panel-border); color: #ffffff; }
+    [data-theme="light"] .bestiary-top, [data-theme="light"] #bestiary-left, [data-theme="light"] #bestiary-right, [data-theme="light"] .b-ability-row { border-color: var(--panel-border); }
+    [data-theme="light"] .b-list-family, [data-theme="light"] .b-card-family { color: var(--text-muted); }
+    [data-theme="light"] .b-list-item:hover, [data-theme="light"] .b-list-item.selected, [data-theme="light"] .b-card-item:hover, [data-theme="light"] .b-card-item.selected { background-color: var(--highlight-bg); border-color: var(--panel-border); }
+    [data-theme="light"] .b-card-item { border-color: var(--panel-border); }
+    [data-theme="light"] #b-filter-popup { background-color: var(--panel-bg); border-color: var(--panel-border); color: var(--text-main); }
+    [data-theme="light"] .b-filter-col strong { border-color: var(--panel-border); color: var(--text-main); }
+    [data-theme="light"] .b-pagination-bar { background-color: var(--panel-bg); border-color: var(--panel-border); }
+    [data-theme="light"] .b-detail-header, [data-theme="light"] .b-detail-box-label { color: #003380; }
+    [data-theme="light"] .b-detail-box { border-color: #003380; }
+    [data-theme="light"] .b-ability-desc, [data-theme="light"] .b-journal-title, [data-theme="light"] .b-journal-subtitle { color: var(--text-main); }
+    [data-theme="light"] .b-progress-bar-bg { background-color: var(--panel-border); }
+    [data-theme="light"] .b-card-item, [data-theme="light"] .b-ability-row { border-color: #222222; }
+    
+    [data-theme="light"] .kw-fire { color: #8a0000; font-weight: bold; }
+    [data-theme="light"] .kw-ice { color: #002b80; font-weight: bold; }
+    [data-theme="light"] .kw-wind { color: #004d00; font-weight: bold; }
+    [data-theme="light"] .kw-earth { color: #4d3300; font-weight: bold; }
+    [data-theme="light"] .kw-lightning { color: #664d00; font-weight: bold; }
+    [data-theme="light"] .kw-water { color: #000066; font-weight: bold; }
+    [data-theme="light"] .kw-slashing, [data-theme="light"] .kw-blunt, [data-theme="light"] .kw-piercing { color: #000000; font-weight: bold; }
+    [data-theme="light"] .kw-beastkin, [data-theme="light"] .kw-vilekin, [data-theme="light"] .kw-cloudkin, [data-theme="light"] .kw-seedkin, [data-theme="light"] .kw-wavekin, [data-theme="light"] .kw-scalekin, [data-theme="light"] .kw-soulkin, [data-theme="light"] .kw-ashkin { color: #000000; font-weight: bold; }
+    [data-theme="light"] .kw-slow, [data-theme="light"] .kw-paralyze, [data-theme="light"] .kw-silence, [data-theme="light"] .kw-interrupt, [data-theme="light"] .kw-blind, [data-theme="light"] .kw-knockdown, [data-theme="light"] .kw-sleep, [data-theme="light"] .kw-bind, [data-theme="light"] .kw-heavy, [data-theme="light"] .kw-doom, [data-theme="light"] .kw-death, [data-theme="light"] .kw-poison, [data-theme="light"] .kw-petrify { color: #4d004d; font-weight: bold; }
+    
+    [data-theme="light"] .label-trick { color: #002b80; }
+    [data-theme="light"] .label-release { color: #4d3300; }
+    [data-theme="light"] .label-borrow { color: #004d00; }
+    [data-theme="light"] .label-parting { color: #8a0000; }

@@ -1,11 +1,21 @@
 import { defineConfig } from "vite";
+import { viteStaticCopy } from 'vite-plugin-static-copy';
 
 // @ts-expect-error process is a Node.js global
 const host = process.env.TAURI_DEV_HOST;
 
 export default defineConfig(async () => ({
     clearScreen: false,
-
+    plugins: [
+        viteStaticCopy({
+            targets: [
+                {
+                    src: 'TerritoryType_Filtered.csv',
+                    dest: ''
+                }
+            ]
+        })
+    ],
     server: {
         port: 1420,
         strictPort: true,

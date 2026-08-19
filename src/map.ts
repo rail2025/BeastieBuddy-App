@@ -15,8 +15,14 @@ let isShaded = false;
 let originalHeight = 530;
 let isPinned = urlParams.get('pinned') === 'true';
 
-mapBody.style.opacity = urlParams.get('opacity') || '1.0';
-if (isPinned) btnPin.style.opacity = '1';
+async function applyVisualState(pinned: boolean, opacity: string) {
+  isPinned = pinned;
+  await appWindow.setAlwaysOnTop(isPinned);
+  btnPin.style.opacity = isPinned ? '1' : '0.5';
+  mapBody.style.opacity = opacity;
+}
+
+applyVisualState(isPinned, urlParams.get('opacity') || '1.0');
 
 function updateFlag(x: number, y: number) {
   flag.style.left = `${((x - 1) / 40) * 100}%`;
@@ -27,10 +33,11 @@ let mapTrackingId = 0;
 
 async function loadMap(zoneName: string) {
   const currentId = ++mapTrackingId;
-  const spinner = document.getElementById('map-spinner');
-  if (spinner) spinner.style.display = 'block';
+  const spinner = getUIElement('map-spinner');
+  spinner.style.display = 'block';
 
   const searchZone = zoneName.includes(':') ? zoneName.split(':')[1].trim() : zoneName;
+  const searchZoneLower = searchZone.toLowerCase();
 
   try {
     const csvResponse = await fetch('/TerritoryType_Filtered.csv');
@@ -41,7 +48,7 @@ async function loadMap(zoneName: string) {
     const lines = csvText.split('\n');
     for (let i = 1; i < lines.length; i++) {
       const cols = lines[i].split(',');
-      if (cols.length >= 4 && (cols[2].trim() === searchZone || cols[3].trim() === searchZone)) {
+      if (cols.length >= 4 && (cols[2].trim().toLowerCase() === searchZoneLower || cols[3].trim().toLowerCase() === searchZoneLower)) {
         territoryId = parseInt(cols[0].trim(), 10);
         break;
       }
@@ -99,12 +106,12 @@ async function loadMap(zoneName: string) {
       return;
     }
 
-    mapImg.onload = () => { if (spinner) spinner.style.display = 'none'; };
-    mapImg.onerror = () => { if (spinner) spinner.style.display = 'none'; };
+    mapImg.onload = () => { spinner.style.display = 'none'; };
+    mapImg.onerror = () => { spinner.style.display = 'none'; };
     mapImg.src = imageUrl;
 
   } catch (err) {
-    if (currentId === mapTrackingId && spinner) spinner.style.display = 'none';
+    if (currentId === mapTrackingId) spinner.style.display = 'none';
         alert(`Map failed: ${err}`);
   }
 }
@@ -117,31 +124,25 @@ updateFlag(initialX, initialY);
 if (initialZone) loadMap(initialZone);
 
 listen<{ opacity: string; pinned: boolean }>('update-settings', async (event) => {
-  isPinned = event.payload.pinned;
-  await appWindow.setAlwaysOnTop(isPinned);
-  btnPin.style.opacity = isPinned ? '1' : '0.5';
-  mapBody.style.opacity = event.payload.opacity;
+  await applyVisualState(event.payload.pinned, event.payload.opacity);
 });
 
 listen<{ x: number; y: number; zone: string; pinned: boolean; opacity: string }>('map-update', async (event) => {
   const { x, y, zone, pinned, opacity } = event.payload;
   updateFlag(x, y);
-  isPinned = pinned;
-  await appWindow.setAlwaysOnTop(isPinned);
-  btnPin.style.opacity = isPinned ? '1' : '0.5';
-  mapBody.style.opacity = opacity;
+  await applyVisualState(pinned, opacity);
   await loadMap(zone);
 });
 
-document.getElementById('btn-close')?.addEventListener('click', () => appWindow.close());
+getUIElement('btn-close').addEventListener('click', () => appWindow.close());
 
-btnPin?.addEventListener('click', async (e) => {
+btnPin.addEventListener('click', async (e) => {
   isPinned = !isPinned;
   await appWindow.setAlwaysOnTop(isPinned);
   (e.target as HTMLElement).style.opacity = isPinned ? '1' : '0.5';
 });
 
-btnShade?.addEventListener('click', async () => {
+btnShade.addEventListener('click', async () => {
   isShaded = !isShaded;
   const currentSize = await appWindow.innerSize();
   if (isShaded) {
