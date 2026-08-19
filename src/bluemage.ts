@@ -26,29 +26,37 @@ function setupEventListeners() {
 
 import { getUIElement, Spell, SpellSource } from './core-definitions.ts';
 
-function renderList() {
-  const leftPane = getUIElement('blu-left');
+function getFilteredSpells(): Spell[] {
   const filterMode = (document.querySelector('input[name="blu-filter"]:checked') as HTMLInputElement).value;
   const filterText = getUIElement<HTMLInputElement>('blu-search').value.toLowerCase();
 
-  leftPane.innerHTML = '';
-
-  bluData.forEach((spell: Spell) => {
-    if (filterMode === 'learned' && !learnedSet.has(spell.Number)) return;
-    if (filterMode === 'unlearned' && learnedSet.has(spell.Number)) return;
+  return bluData.filter((spell: Spell) => {
+    if (filterMode === 'learned' && !learnedSet.has(spell.Number)) return false;
+    if (filterMode === 'unlearned' && learnedSet.has(spell.Number)) return false;
 
     const searchStr = `${spell.Name} ${spell.Sources.map((s: SpellSource) => s.Name + ' ' + s.Location).join(' ')}`.toLowerCase();
-    if (filterText && !searchStr.includes(filterText)) return;
+    if (filterText && !searchStr.includes(filterText)) return false;
+    return true;
+  });
+}
 
+function buildListItemHtml(spell: Spell, isChecked: boolean): string {
+  return `
+    <input type="checkbox" ${isChecked ? 'checked' : ''} />
+    <span class="blu-list-number">${spell.Number}.</span>
+    <span class="blu-list-name">${spell.Name}</span>
+  `;
+}
+
+function renderList() {
+  const leftPane = getUIElement('blu-left');
+  leftPane.innerHTML = '';
+  const filtered = getFilteredSpells();
+
+  filtered.forEach((spell: Spell) => {
     const el = document.createElement('div');
     el.className = 'blu-list-item';
-    const isChecked = learnedSet.has(spell.Number) ? 'checked' : '';
-    
-    el.innerHTML = `
-      <input type="checkbox" ${isChecked} />
-      <span class="blu-list-number">${spell.Number}.</span>
-      <span class="blu-list-name">${spell.Name}</span>
-    `;
+    el.innerHTML = buildListItemHtml(spell, learnedSet.has(spell.Number));
 
     el.addEventListener('click', (e) => {
       const target = e.target as HTMLElement;
@@ -60,7 +68,8 @@ function renderList() {
           saveSaveData(data.beasts, Array.from(learnedSet));
         });
 
-        if (filterMode !== 'all') renderList();
+        const currentFilterMode = (document.querySelector('input[name="blu-filter"]:checked') as HTMLInputElement).value;
+        if (currentFilterMode !== 'all') renderList();
         return;
       }
       
@@ -73,10 +82,7 @@ function renderList() {
   });
 }
 
-function showDetails(spell: Spell) {
-  const rightPane = getUIElement('blu-right');
-  rightPane.classList.remove('hidden');
-
+function buildDetailsHtml(spell: Spell): string {
   let sourcesHtml = '';
   
   const groupedSources = spell.Sources.reduce((acc: Record<string, SpellSource[]>, curr: SpellSource) => {
@@ -100,12 +106,18 @@ function showDetails(spell: Spell) {
     sourcesHtml += `</div>`;
   });
 
-  rightPane.innerHTML = `
+  return `
     <div class="blu-detail-header">${spell.Number}. ${spell.Name}</div>
     <div class="blu-detail-rank">Rank: ${spell.Rank}</div>
     <hr class="blu-hr" />
     <div class="blu-sources">${sourcesHtml}</div>
   `;
+}
+
+function showDetails(spell: Spell) {
+  const rightPane = getUIElement('blu-right');
+  rightPane.classList.remove('hidden');
+  rightPane.innerHTML = buildDetailsHtml(spell);
 
   rightPane.querySelectorAll('.blu-btn-map').forEach(btn => {
     btn.addEventListener('click', () => {

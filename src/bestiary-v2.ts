@@ -176,6 +176,25 @@ function getFilteredData() {
   });
 }
 
+function buildBestiaryItemHtml(beast: Beast, viewMode: string, colorClass: string, iconHtml: string, isChecked: string): string {
+  if (viewMode === 'list') {
+    return `
+      <input type="checkbox" class="b-cap-check" data-id="${beast.id}" ${isChecked} />
+      ${iconHtml}
+      <div class="b-list-name" style="margin-left: 8px;">${beast.id.padStart(2, '0')}. ${beast.Name}</div>
+      <div class="b-list-family">Unknown</div>
+      <div class="b-list-element ${colorClass}">${beast.AutoAttackElement}</div>
+    `;
+  }
+  return `
+    <div class="b-card-top"><span>#${beast.id.padStart(2, '0')}</span><input type="checkbox" class="b-cap-check" data-id="${beast.id}" ${isChecked} /></div>
+    <div class="b-card-icon">${iconHtml}</div>
+    <div class="b-card-name">${beast.Name}</div>
+    <div class="b-card-family">Unknown</div>
+    <div class="b-card-element ${colorClass}">${beast.AutoAttackElement}</div>
+  `;
+}
+
 function renderData() {
   const leftPane = getUIElement('bestiary-left');
   const filtered = getFilteredData();
@@ -199,23 +218,7 @@ function renderData() {
     const iconHtml = `<img src="https://xivapi.com/i/234000/${iconId}.png" style="width: 32px; height: 32px;" onerror="this.style.display='none'"/>`;
     const isChecked = capturedSet.has(beast.id) ? 'checked' : '';
 
-    if (viewMode === 'list') {
-      el.innerHTML = `
-        <input type="checkbox" class="b-cap-check" data-id="${beast.id}" ${isChecked} />
-        ${iconHtml}
-        <div class="b-list-name" style="margin-left: 8px;">${beast.id.padStart(2, '0')}. ${beast.Name}</div>
-        <div class="b-list-family">Unknown</div>
-        <div class="b-list-element ${colorClass}">${beast.AutoAttackElement}</div>
-      `;
-    } else {
-      el.innerHTML = `
-        <div class="b-card-top"><span>#${beast.id.padStart(2, '0')}</span><input type="checkbox" class="b-cap-check" data-id="${beast.id}" ${isChecked} /></div>
-        <div class="b-card-icon">${iconHtml}</div>
-        <div class="b-card-name">${beast.Name}</div>
-        <div class="b-card-family">Unknown</div>
-        <div class="b-card-element ${colorClass}">${beast.AutoAttackElement}</div>
-      `;
-    }
+    el.innerHTML = buildBestiaryItemHtml(beast, viewMode, colorClass, iconHtml, isChecked);
 
     el.addEventListener('click', async (e) => {
       const target = e.target as HTMLElement;
@@ -261,14 +264,10 @@ function renderData() {
   });
 }
 
-function showBestiaryDetails(id: string, beast: Beast, colorClass: string, iconHtml: string) {
-  getUIElement('bestiary-placeholder').classList.add('hidden');
-  const details = getUIElement('bestiary-details');
-  details.classList.remove('hidden');
-
-  details.innerHTML = `
+function buildBestiaryDetailsHtml(id: string, beast: Beast, colorClass: string, iconHtml: string): string {
+  return `
     <div class="b-detail-header">No. ${id.padStart(2, '0')} ${beast.Name}</div>
-    <div class="b-detail-image-box">${iconHtml.replace('32px', '80px').replace('32px', '80px')}</div>
+    <div class="b-detail-image-box">${iconHtml.replace(/32px/g, '80px')}</div>
     <div class="b-detail-box"><span class="b-detail-box-label">Habitat</span> = ${highlightKeywords(beast.Location)}</div>
     <div class="b-detail-box"><span class="b-detail-box-label">Element</span> <span class="${colorClass}">${beast.AutoAttackElement}</span></div>
     <button class="btn-spawn" id="b-btn-spawn">Find Spawn Locations</button>
@@ -282,6 +281,14 @@ function showBestiaryDetails(id: string, beast: Beast, colorClass: string, iconH
     <div class="b-ability-row"><span class="b-ability-name label-parting">Parting Blow</span><span>${highlightKeywords(beast.PartingBlow?.Name || 'Unknown')}</span></div>
     <div class="b-ability-desc">${highlightKeywords(beast.PartingBlow?.Effect || '')}</div>
   `;
+}
+
+function showBestiaryDetails(id: string, beast: Beast, colorClass: string, iconHtml: string) {
+  getUIElement('bestiary-placeholder').classList.add('hidden');
+  const details = getUIElement('bestiary-details');
+  details.classList.remove('hidden');
+
+  details.innerHTML = buildBestiaryDetailsHtml(id, beast, colorClass, iconHtml);
 
   getUIElement('b-btn-spawn').addEventListener('click', () => {
     const searchTab = getUIElement('tab-search');
