@@ -1,13 +1,15 @@
 import { getCurrentWindow, LogicalSize } from '@tauri-apps/api/window';
 import { listen } from '@tauri-apps/api/event';
+import { BaseDirectory, exists, mkdir, readFile, writeFile } from '@tauri-apps/plugin-fs';
+import { getUIElement } from './core-definitions.ts';
 
 const appWindow = getCurrentWindow();
 const urlParams = new URLSearchParams(window.location.search);
-const btnShade = document.getElementById('btn-shade') as HTMLElement;
-const btnPin = document.getElementById('btn-pin') as HTMLElement;
-const mapBody = document.getElementById('map-body') as HTMLElement;
-const mapImg = document.getElementById('zone-map-img') as HTMLImageElement;
-const flag = document.getElementById('map-flag') as HTMLElement;
+const btnShade = getUIElement('btn-shade');
+const btnPin = getUIElement('btn-pin');
+const mapBody = getUIElement('map-body');
+const mapImg = getUIElement<HTMLImageElement>('zone-map-img');
+const flag = getUIElement('map-flag');
 
 let isShaded = false;
 let originalHeight = 530;
@@ -21,17 +23,32 @@ function updateFlag(x: number, y: number) {
   flag.style.top = `${((y - 1) / 40) * 100}%`;
 }
 
+let mapTrackingId = 0;
+
 async function loadMap(zoneName: string) {
+  const currentId = ++mapTrackingId;
+  const spinner = document.getElementById('map-spinner');
+  if (spinner) spinner.style.display = 'block';
+
+  const searchZone = zoneName.includes(':') ? zoneName.split(':')[1].trim() : zoneName;
+
   try {
-    const query = `PlaceName.Name="${zoneName}"`;
-    const searchUrl = `https://v2.xivapi.com/api/search?language=en&sheets=TerritoryType&fields=Map,PlaceName.Name&query=${encodeURIComponent(query)}&limit=5`;
-    const searchResponse = await fetch(searchUrl);
-    if (!searchResponse.ok) throw new Error(`Territory search failed: ${searchResponse.status}`);
+    const csvResponse = await fetch('/TerritoryType_Filtered.csv');
+    if (!csvResponse.ok) throw new Error('Failed to load local map data');
+    const csvText = await csvResponse.text();
+    
+    let territoryId: number | undefined;
+    const lines = csvText.split('\n');
+    for (let i = 1; i < lines.length; i++) {
+      const cols = lines[i].split(',');
+      if (cols.length >= 4 && (cols[2].trim() === searchZone || cols[3].trim() === searchZone)) {
+        territoryId = parseInt(cols[0].trim(), 10);
+        break;
+      }
+    }
 
-    const searchData = JSON.parse(await searchResponse.text());
-    if (!searchData.results || searchData.results.length === 0) throw new Error(`No TerritoryType found for "${zoneName}"`);
+    if (territoryId === undefined) throw new Error(`No TerritoryType found for "${zoneName}"`);
 
-    const territoryId = searchData.results[0].row_id;
     const territoryResponse = await fetch(`https://v2.xivapi.com/api/sheet/TerritoryType/${territoryId}`);
     if (!territoryResponse.ok) throw new Error(`TerritoryType request failed: ${territoryResponse.status}`);
 
@@ -54,12 +71,41 @@ async function loadMap(zoneName: string) {
 
     if (typeof mapAssetId !== 'string' || !mapAssetId) throw new Error('Map row does not contain a valid Id');
 
-    const imageUrl = `https://v2.xivapi.com/api/asset/map/${mapAssetId}`;
-    mapImg.onload = () => console.log('[Map] Map image loaded successfully');
-    mapImg.onerror = () => console.error('[Map] Map image failed to load:', imageUrl);
+    const safeMapAssetId = String(mapAssetId).replace(/\//g, '-');
+    const cacheDir = 'BeastieBuddy_Map_Download_Cache';
+    const fileName = `${cacheDir}/map_${safeMapAssetId}.png`;
+    
+    const dirExists = await exists(cacheDir, { baseDir: BaseDirectory.AppLocalData });
+    if (!dirExists) {await mkdir(cacheDir, { baseDir: BaseDirectory.AppLocalData, recursive: true});
+}
+
+    const fileExists = await exists(fileName, { baseDir: BaseDirectory.AppLocalData });
+    let imageUrl = '';
+
+    if (fileExists) {
+      const fileData = await readFile(fileName, { baseDir: BaseDirectory.AppLocalData });
+      const blob = new Blob([fileData], { type: 'image/jpeg' });
+      imageUrl = URL.createObjectURL(blob);
+    } else {
+      const imgResponse = await fetch(`https://v2.xivapi.com/api/asset/map/${mapAssetId}`);
+      const buffer = await imgResponse.arrayBuffer();
+      await writeFile(fileName, new Uint8Array(buffer), { baseDir: BaseDirectory.AppLocalData });
+      const blob = new Blob([buffer], { type: 'image/jpeg' });
+      imageUrl = URL.createObjectURL(blob);
+    }
+
+    if (currentId !== mapTrackingId) {
+      URL.revokeObjectURL(imageUrl);
+      return;
+    }
+
+    mapImg.onload = () => { if (spinner) spinner.style.display = 'none'; };
+    mapImg.onerror = () => { if (spinner) spinner.style.display = 'none'; };
     mapImg.src = imageUrl;
+
   } catch (err) {
-    console.error('[Map] Failed:', err);
+    if (currentId === mapTrackingId && spinner) spinner.style.display = 'none';
+        alert(`Map failed: ${err}`);
   }
 }
 

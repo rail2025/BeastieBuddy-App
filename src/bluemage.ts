@@ -38,14 +38,16 @@ function setupEventListeners() {
   document.getElementById('blu-search')?.addEventListener('input', renderList);
 }
 
+import { getUIElement, Spell } from './core-definitions.ts';
+
 function renderList() {
-  const leftPane = document.getElementById('blu-left')!;
+  const leftPane = getUIElement('blu-left');
   const filterMode = (document.querySelector('input[name="blu-filter"]:checked') as HTMLInputElement).value;
-  const filterText = (document.getElementById('blu-search') as HTMLInputElement).value.toLowerCase();
+  const filterText = getUIElement<HTMLInputElement>('blu-search').value.toLowerCase();
 
   leftPane.innerHTML = '';
 
-  bluData.forEach((spell: any) => {
+  bluData.forEach((spell: Spell) => {
     if (filterMode === 'learned' && !learnedSet.has(spell.Number)) return;
     if (filterMode === 'unlearned' && learnedSet.has(spell.Number)) return;
 

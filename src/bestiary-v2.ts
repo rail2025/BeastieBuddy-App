@@ -87,8 +87,9 @@ function normalizeKeyword(word: string) {
   return w;
 }
 import { loadSaveData, saveSaveData } from './save.ts';
+import { getUIElement, Beast } from './core-definitions.ts';
 
-let allBeasts: any[] = [];
+let allBeasts: Beast[] = [];
 let capturedSet = new Set<string>();
 let activeFilters = new Set<string>();
 let currentPage = 1;
@@ -97,7 +98,7 @@ const itemsPerPage = 25;
 export async function initBestiaryV2(container: HTMLElement) {
   container.innerHTML = htmlTemplate;
   buildFilters();
-  const leftPane = document.getElementById('bestiary-left')!;
+  const leftPane = getUIElement('bestiary-left');
   leftPane.innerHTML = '<div class="b-loading">Loading Bestiary...</div>';
 
   try {
@@ -170,10 +171,21 @@ function setupEventListeners() {
   });
 }
 
+function escapeHTML(str: string): string {
+  return str.replace(/[&<>'"]/g, tag => ({
+    '&': '&amp;',
+    '<': '&lt;',
+    '>': '&gt;',
+    "'": '&#39;',
+    '"': '&quot;'
+  }[tag] || tag));
+}
+
 function highlightKeywords(text: string) {
   if (!text) return '';
+  const safeText = escapeHTML(text);
   const map = new Map(KEYWORDS.map(k => [normalizeKeyword(k), k.toLowerCase()]));
-  return text.replace(/\b[\w'-]+\b/g, m => {
+  return safeText.replace(/\b[\w'-]+\b/g, m => {
     const k = map.get(normalizeKeyword(m));
     return k ? `<span class="kw-${k}">${m}</span>` : m;
   });
@@ -316,14 +328,14 @@ function showBestiaryDetails(id: string, beast: any, colorClass: string, iconHtm
     <div class="b-detail-box"><span class="b-detail-box-label">Element</span> <span class="${colorClass}">${beast.AutoAttackElement}</span></div>
     <button class="btn-spawn" id="b-btn-spawn">Find Spawn Locations</button>
     
-    <div class="b-ability-row"><span class="b-ability-name label-trick">Trick</span><span>${highlightKeywords(beast.Trick?.Name || 'Unknown')}</span></div>
+   <div class="b-ability-row"><span class="b-ability-name label-trick">Trick</span><span>${highlightKeywords(beast.Trick?.Name || 'Unknown')}</span></div>
     <div class="b-ability-desc">${highlightKeywords(beast.Trick?.Effect || '')}</div>
     <div class="b-ability-row"><span class="b-ability-name label-release">Tempered Release</span><span>${highlightKeywords(beast.TemperedRelease?.Name || 'Unknown')}</span></div>
     <div class="b-ability-desc">${highlightKeywords(beast.TemperedRelease?.Effect || '')}</div>
-    <div class="b-ability-row"><span class="b-ability-name label-borrow">Borrow</span><span>${highlightKeywords(beast["Nature's Gift"]?.Name || 'Unknown')}</span></div>
-    <div class="b-ability-desc">${highlightKeywords(beast["Nature's Gift"]?.Effect || '')}</div>
-    <div class="b-ability-row"><span class="b-ability-name label-parting">Parting Blow</span><span>${highlightKeywords(beast.Finisher?.Name || 'Unknown')}</span></div>
-    <div class="b-ability-desc">${highlightKeywords(beast.Finisher?.Effect || '')}</div>
+    <div class="b-ability-row"><span class="b-ability-name label-borrow">Borrow</span><span>${highlightKeywords(beast.Borrow?.Name || 'Unknown')}</span></div>
+    <div class="b-ability-desc">${highlightKeywords(beast.Borrow?.Effect || '')}</div>
+    <div class="b-ability-row"><span class="b-ability-name label-parting">Parting Blow</span><span>${highlightKeywords(beast.PartingBlow?.Name || 'Unknown')}</span></div>
+    <div class="b-ability-desc">${highlightKeywords(beast.PartingBlow?.Effect || '')}</div>
   `;
 
   document.getElementById('b-btn-spawn')?.addEventListener('click', () => {

@@ -2,14 +2,15 @@ import { getCurrentWindow, LogicalSize } from '@tauri-apps/api/window';
 import { WebviewWindow } from '@tauri-apps/api/webviewWindow';
 import { listen } from '@tauri-apps/api/event';
 import { loadSaveData, saveSettingsData } from './save.ts';
+import { getUIElement } from './core-definitions.ts';
 
 const appWindow = getCurrentWindow();
-const searchInput = document.getElementById('search-input') as HTMLInputElement;
-const resultsContainer = document.getElementById('results-container') as HTMLElement;
-const opacityMenu = document.getElementById('opacity-menu') as HTMLElement;
-const opacitySlider = document.getElementById('opacity-slider') as HTMLInputElement;
-const btnShade = document.getElementById('btn-shade') as HTMLElement;
-const titlebar = document.getElementById('titlebar') as HTMLElement;
+const searchInput = getUIElement<HTMLInputElement>('search-input');
+const resultsContainer = getUIElement('results-container');
+const opacityMenu = getUIElement('opacity-menu');
+const opacitySlider = getUIElement<HTMLInputElement>('opacity-slider');
+const btnShade = getUIElement('btn-shade');
+const titlebar = getUIElement('titlebar');
 
 let waitTimer: number;
 let currentRequest: AbortController | null = null;
@@ -17,11 +18,14 @@ let isShaded = false;
 let originalHeight = 600;
 let isPinned = false;
 let currentOpacity = "1.0";
+let currentTheme = "dark";
 
 loadSaveData().then(async (data) => {
   currentOpacity = data.settings.opacity;
   isPinned = data.settings.pinned;
+  currentTheme = data.settings.theme || "dark";
   
+  document.documentElement.setAttribute('data-theme', currentTheme);
   document.getElementById('app')!.style.opacity = currentOpacity;
   opacitySlider.value = currentOpacity;
   
@@ -38,20 +42,29 @@ titlebar.addEventListener('mousedown', (e) => {
   }
 });
 
+document.getElementById('btn-theme')?.addEventListener('click', () => {
+  currentTheme = currentTheme === 'dark' ? 'light' : 'dark';
+  document.documentElement.setAttribute('data-theme', currentTheme);
+  saveSettingsData({ opacity: currentOpacity, pinned: isPinned, theme: currentTheme });
+});
+
 document.getElementById('btn-minimize')?.addEventListener('click', () => appWindow.minimize());
 document.getElementById('btn-close')?.addEventListener('click', () => appWindow.close());
 
-listen<{ opacity: string, pinned: boolean }>('update-settings', async (event) => {
+listen<{ opacity: string, pinned: boolean, theme: string }>('update-settings', async (event) => {
   currentOpacity = event.payload.opacity;
   document.getElementById('app')!.style.opacity = currentOpacity;
   opacitySlider.value = currentOpacity;
   
+  currentTheme = event.payload.theme;
+  document.documentElement.setAttribute('data-theme', currentTheme);
+
   isPinned = event.payload.pinned;
   await appWindow.setAlwaysOnTop(isPinned);
   const pinBtn = document.getElementById('btn-pin');
   if (pinBtn) pinBtn.style.opacity = isPinned ? '1' : '0.5';
   
-  saveSettingsData({ opacity: currentOpacity, pinned: isPinned });
+  saveSettingsData({ opacity: currentOpacity, pinned: isPinned, theme: currentTheme });
 });
 
 document.getElementById('btn-pin')?.addEventListener('click', async (e) => {
@@ -60,7 +73,7 @@ document.getElementById('btn-pin')?.addEventListener('click', async (e) => {
   const target = e.target as HTMLElement;
   target.style.opacity = isPinned ? '1' : '0.5';
   
-  saveSettingsData({ opacity: currentOpacity, pinned: isPinned });
+  saveSettingsData({ opacity: currentOpacity, pinned: isPinned, theme: currentTheme });
 });
 
 btnShade?.addEventListener('click', async () => {
@@ -94,7 +107,7 @@ opacitySlider.addEventListener('input', (e) => {
 });
 
 opacitySlider.addEventListener('change', () => {
-  saveSettingsData({ opacity: currentOpacity, pinned: isPinned });
+  saveSettingsData({ opacity: currentOpacity, pinned: isPinned, theme: currentTheme });
 });
 
 searchInput.addEventListener('input', (e) => {
@@ -137,13 +150,19 @@ searchInput.addEventListener('input', (e) => {
         row.className = 'result-row';
         row.style.cursor = 'pointer';
         
+        const coords = item.coordinates?.[0] || {};
+        const itemName = item.name || item.Name || 'Unknown';
+        const itemZone = item.zone || item.Zone || coords.zone || 'Unknown';
+        const itemX = item.x ?? item.X ?? coords.x ?? 1;
+        const itemY = item.y ?? item.Y ?? coords.y ?? 1;
+
         const name = document.createElement('span');
         name.className = 'result-name';
-        name.textContent = item.Name;
+        name.textContent = itemName;
         
         const location = document.createElement('span');
         location.className = 'result-loc';
-        location.textContent = `${item.Zone} (~${item.X}, ${item.Y})`;
+        location.textContent = `${itemZone} (~${itemX}, ${itemY})`;
         
         row.appendChild(name);
         row.appendChild(location);
@@ -151,9 +170,9 @@ searchInput.addEventListener('input', (e) => {
 
         row.addEventListener('click', async () => {
           const mapData = {
-            x: item.X,
-            y: item.Y,
-            zone: item.Zone,
+            x: itemX,
+            y: itemY,
+            zone: itemZone,
             pinned: isPinned,
             opacity: currentOpacity
           };
@@ -206,7 +225,7 @@ async function toggleWindow(label: string, url: string, title: string, width: nu
     await existing.close();
     return;
   }
-  const pos = await appWindow.outerPosition();
+ const pos = await appWindow.outerPosition();
   new WebviewWindow(label, {
     url, title, width, height,
     x: pos.x + 50, y: pos.y + 50,
@@ -217,7 +236,7 @@ async function toggleWindow(label: string, url: string, title: string, width: nu
 }
 
 document.getElementById('btn-settings')?.addEventListener('click', () => {
-  toggleWindow('settings-window', `settings.html?opacity=${currentOpacity}&pinned=${isPinned}`, 'Configuration', 340, 180);
+  toggleWindow('settings-window', `settings.html?opacity=${currentOpacity}&pinned=${isPinned}&theme=${currentTheme}`, 'Configuration', 340, 210);
 });
 
 document.getElementById('btn-about')?.addEventListener('click', () => {
