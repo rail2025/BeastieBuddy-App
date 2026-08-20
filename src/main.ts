@@ -121,6 +121,8 @@ searchInput.addEventListener('input', (e) => {
 
   if (text === '') {
     resultsContainer.innerHTML = '';
+    const statusBar = document.getElementById('status-bar');
+    if (statusBar) statusBar.textContent = 'Search for a beastie to get tips!';
     return;
   }
 
@@ -140,6 +142,16 @@ searchInput.addEventListener('input', (e) => {
       const data = await response.json();
       resultsContainer.innerHTML = '';
       
+      const statusBar = document.getElementById('status-bar');
+      if (statusBar) {
+        if (data.message) {
+          let msgHtml = data.message.replace(/\[Ko-fi\]/g, '<a href="https://ko-fi.com/rail2025" target="_blank" style="color: var(--kofi-color); text-decoration: none; cursor: pointer;">[Ko-fi]</a>');
+          statusBar.innerHTML = data.is_rare ? `<span style="color: var(--rare-color);">${msgHtml}</span>` : msgHtml;
+        } else {
+          statusBar.textContent = 'Search for a beastie to get tips!';
+        }
+      }
+
       if (!data.results || data.results.length === 0) {
         resultsContainer.innerHTML = '<div class="no-results">No results found.</div>';
         return;

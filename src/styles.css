@@ -6,6 +6,8 @@
   --panel-bg: #1a1a1a;
   --panel-border: #444444;
   --highlight-bg: #2a2a2a;
+  --kofi-color: #80ff80;
+  --rare-color: #ffd700;
   background-color: transparent;
   color: var(--text-main);
   font-family: sans-serif;
@@ -20,6 +22,8 @@
   --panel-bg: #e0e0e0;
   --panel-border: #444444;
   --highlight-bg: #d0d0d0;
+  --kofi-color: #006600;
+  --rare-color: #50007e;
 }
 
 body {
@@ -145,10 +149,9 @@ body {
 
 #status-bar {
   padding: 4px 8px;
-  background-color: #111111;
-  color: #666666;
-  font-size: 11px;
-  border-top: 1px solid #222222;
+  background-color: var(--highlight-bg);
+  color: var(--text-muted);
+  border-top: 1px solid var(--panel-border);
 }
 
 #btn-shade {
