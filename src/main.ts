@@ -152,7 +152,8 @@ searchInput.addEventListener('input', (e) => {
         
         const coords = item.coordinates?.[0];
         const itemName = item.name || item.Name || 'Unknown';
-        const itemZone = item.zone || item.Zone || coords?.zone || 'Unknown';
+        let itemZone = item.zone || item.Zone || coords?.zone || 'Unknown';
+          itemZone = itemZone.replace('The Forbidden Land, ', '').replace('The Bozjan Southern Front', 'Bozjan Southern Front');
         const itemX = item.x ?? item.X ?? coords?.x ?? 1;
         const itemY = item.y ?? item.Y ?? coords?.y ?? 1;
 

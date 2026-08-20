@@ -60,13 +60,11 @@ async function loadMap(zoneName: string) {
     if (!territoryResponse.ok) throw new Error(`TerritoryType request failed: ${territoryResponse.status}`);
 
     const territoryData = JSON.parse(await territoryResponse.text());
-    const mapReference = territoryData.fields?.Map ?? territoryData.Map;
+    const mapReference = territoryData.fields?.Map
     let mapId: number | undefined;
 
     if (typeof mapReference === 'number') mapId = mapReference;
     else if (mapReference?.row_id && typeof mapReference.row_id === 'number') mapId = mapReference.row_id;
-    else if (mapReference?.RowId && typeof mapReference.RowId === 'number') mapId = mapReference.RowId;
-    else if (mapReference?.value && typeof mapReference.value === 'number') mapId = mapReference.value;
 
     if (mapId === undefined) throw new Error('Could not determine Map row ID');
 
