@@ -21,9 +21,9 @@ No installer. Download the `.exe` and run it.
 
 ### Windows Security Warning
 
-BeastieBuddy is distributed without a commercial code-signing certificate, so Windows may display an **"Unknown publisher"** warning when you first run it.
+Because I don't pay hundreds of dollars a year for a commercial code-signing certificate, Windows SmartScreen is going to scream at you with an "Unknown publisher" warning when you launch the app for the first time.
 
-This warning appears because the application is not digitally signed with a certificate recognized by Windows. It does **not** mean that the app has malware.
+It does **not** mean that the app has malware.
 
 BeastieBuddy's code is available in this repository for inspection, and you can build the application yourself if you prefer.
 
@@ -84,14 +84,8 @@ src-tauri/target/release/
 
 ## Source Availability
 
-The complete source code is provided publicly for inspection, security review, educational purposes, and personal non-commercial builds.
-Public availability of this repository does not mean that the project is licensed under an open-source license.
-
-## License
-
 BeastieBuddy is proprietary software.
-The source code is provided under the accompanying `LICENSE` file.
-You may inspect the source and build BeastieBuddy for personal, non-commercial use. Redistribution, commercial use, sublicensing, and distribution of modified versions require prior written permission.
+I’m keeping the source code public so anyone can inspect the security, review the code, or build it for personal use. However, please note that this is a proprietary solo project. You're totally welcome to look under the hood and use it for yourself, but please don't redistribute it, sell it, or post modified versions without checking with me first.
 
 ## Third-Party Services
 
