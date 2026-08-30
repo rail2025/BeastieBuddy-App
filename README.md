@@ -75,8 +75,6 @@ Building from source requires:
 
 ## Building
 
-Install the JavaScript dependencies
-Build the frontend and the Windows application without creating an installer
 The resulting executable is produced under:
 ```text
 src-tauri/target/release/
@@ -89,8 +87,7 @@ I’m keeping the source code public so anyone can inspect the security, review 
 
 ## Third-Party Services
 
-BeastieBuddy may communicate with external services required for functionality, including the BeastieBuddy API and XIVAPI.
-Those services are independent of this repository and may have their own terms, availability, and limitations.
+BeastieBuddy relies on my search API and XIVAPI. If those are down things will break. Search results for the former, map displays for the latter.
 
 ## Final Fantasy XIV
 
@@ -101,4 +98,4 @@ FINAL FANTASY XIV and related names and assets are trademarks and/or property of
 
 BeastieBuddy is provided without warranty. Use it at your own risk.
 
-The copyright holder is not responsible for problems resulting from the use, modification, or compilation of the software.
+I'm not responsible for any issues, bugs, or problems that happen from using, modifying, or building this software.
