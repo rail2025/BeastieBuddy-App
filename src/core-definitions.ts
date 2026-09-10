@@ -8,6 +8,7 @@ export type Beast = {
   id: string;
   index: number;
   Name: string;
+  IconId: number;
   Classification: string;
   AutoAttackElement: string;
   Location: string;

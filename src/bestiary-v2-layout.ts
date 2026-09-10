@@ -30,6 +30,7 @@ export const htmlTemplate = `
             <div class="b-filter-col" id="filter-col-elements"><strong>Elements</strong></div>
             <div class="b-filter-col" id="filter-col-class"><strong>Classifications</strong></div>
             <div class="b-filter-col" id="filter-col-status"><strong>Status</strong></div>
+            <div class="b-filter-col" id="filter-col-location"><strong>Location</strong></div>
           </div>
           <div class="b-filter-actions">
             <button id="b-btn-reset-filters">Reset All</button>

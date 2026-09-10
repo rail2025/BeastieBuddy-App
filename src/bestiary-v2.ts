@@ -7,7 +7,6 @@ let isExpanded = false;
 
 import { htmlTemplate } from './bestiary-v2-layout.ts';
 
-const ICONS = [234401, 234402, 234403, 234404, 234405, 234412, 234413, 234414, 234415, 234416, 234417, 234419, 234420, 234421, 234422, 234424, 234429, 234430, 234431, 234432, 234433, 234434, 234435, 234436, 234437, 234439, 234441, 234442, 234443];
 const ELEMENTS = ["Fire", "Ice", "Wind", "Earth", "Lightning", "Water", "Slashing", "Blunt", "Piercing"];
 const CLASSIFICATIONS = ["Beastkin", "Vilekin", "Cloudkin", "Seedkin", "Wavekin", "Scalekin", "Soulkin", "Ashkin"];
 const STATUSES = ["Slow", "Paralyze", "Silence", "Interrupt", "Blind", "Knockdown", "Sleep", "Bind", "Heavy", "Doom", "Death", "Poison", "Petrify"];
@@ -36,13 +35,14 @@ import { getUIElement, Beast } from './core-definitions.ts';
 
 let allBeasts: Beast[] = [];
 let capturedSet = new Set<string>();
+let locationFilters: string[] = [];
 let activeFilters = new Set<string>();
 let currentPage = 1;
 const itemsPerPage = 25;
 
 export async function initBestiaryV2(container: HTMLElement) {
   container.innerHTML = htmlTemplate;
-  buildFilters();
+  
   const leftPane = getUIElement('bestiary-left');
   leftPane.innerHTML = '<div class="b-loading">Loading Bestiary...</div>';
 
@@ -53,6 +53,14 @@ export async function initBestiaryV2(container: HTMLElement) {
     allBeasts = Object.entries(data.Beasts).map(([id, beast], index) => {
       return { ...(beast as Omit<Beast, 'id' | 'index'>), id, index };
     });
+
+    locationFilters = [...new Set(
+      allBeasts
+        .map(b => b.Location)
+        .filter(location => location)
+    )].sort();
+
+    buildFilters();
 
     const saveData = await loadSaveData();
     saveData.beasts.forEach((b: string) => capturedSet.add(b));
@@ -159,7 +167,7 @@ function getFilteredData() {
     if (filterMode === 'captured' && !capturedSet.has(b.id)) return false;
     if (filterMode === 'uncaptured' && capturedSet.has(b.id)) return false;
 
-    let searchStr = `${b.Name} ${b.AutoAttackElement} ${b.Trick?.Name} ${b.Trick?.Effect} ${b.TemperedRelease?.Name} ${b.TemperedRelease?.Effect}`.toLowerCase();
+    let searchStr = `${b.Name} ${b.AutoAttackElement} ${b.Location} ${b.Trick?.Name} ${b.Trick?.Effect} ${b.TemperedRelease?.Name} ${b.TemperedRelease?.Effect}`.toLowerCase();
     
     searchStr = searchStr.split(/\s+/).map(normalizeKeyword).join(' ');
 
@@ -214,8 +222,8 @@ function renderData() {
     const el = document.createElement('div');
     el.className = viewMode === 'list' ? 'b-list-item' : 'b-card-item';
     const colorClass = `kw-${(beast.AutoAttackElement || '').toLowerCase()}`;
-    const iconId = ICONS[beast.index % ICONS.length];
-    const iconHtml = `<img src="https://xivapi.com/i/234000/${iconId}.png" style="width: 32px; height: 32px;" onerror="this.style.display='none'"/>`;
+    const iconId = beast.IconId;
+    const iconHtml = `<img src="https://v2.xivapi.com/api/asset?path=ui%2Ficon%2F242000%2F${iconId}.tex&format=png" style="width: 32px; height: 32px;" onerror="this.style.display='none'"/>`;
     const isChecked = capturedSet.has(beast.id) ? 'checked' : '';
 
     el.innerHTML = buildBestiaryItemHtml(beast, viewMode, colorClass, iconHtml, isChecked);
