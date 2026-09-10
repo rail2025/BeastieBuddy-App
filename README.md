@@ -21,9 +21,9 @@ No installer. Download the `.exe` and run it.
 
 ### Windows Security Warning
 
-BeastieBuddy is distributed without a commercial code-signing certificate, so Windows may display an **"Unknown publisher"** warning when you first run it.
+Because I don't pay hundreds of dollars a year for a commercial code-signing certificate, Windows SmartScreen is going to scream at you with an "Unknown publisher" warning when you launch the app for the first time.
 
-This warning appears because the application is not digitally signed with a certificate recognized by Windows. It does **not** mean that the app has malware.
+It does **not** mean that the app has malware.
 
 BeastieBuddy's code is available in this repository for inspection, and you can build the application yourself if you prefer.
 
@@ -40,9 +40,9 @@ If you downloaded BeastieBuddy from this official GitHub repository/release:
 
 The official Windows executable can be verified using its SHA-256 checksum.
 
-**Current Windows EXE v1.0.4.0 SHA-256:**
+**Current Windows EXE v1.0.5.0 SHA-256:**
 
-`c5b71d656d100072e97efaf04c7eee479ace320d4c3025ba34616ecfdaf1ab14`
+`sha256:c1c8c06dd65e4377933115e3a7d4273646f13dc8582c798199d2dba79eb5e699`
 
 To calculate the SHA-256 checksum of a downloaded file in Windows PowerShell:
 
@@ -75,8 +75,6 @@ Building from source requires:
 
 ## Building
 
-Install the JavaScript dependencies
-Build the frontend and the Windows application without creating an installer
 The resulting executable is produced under:
 ```text
 src-tauri/target/release/
@@ -84,19 +82,12 @@ src-tauri/target/release/
 
 ## Source Availability
 
-The complete source code is provided publicly for inspection, security review, educational purposes, and personal non-commercial builds.
-Public availability of this repository does not mean that the project is licensed under an open-source license.
-
-## License
-
 BeastieBuddy is proprietary software.
-The source code is provided under the accompanying `LICENSE` file.
-You may inspect the source and build BeastieBuddy for personal, non-commercial use. Redistribution, commercial use, sublicensing, and distribution of modified versions require prior written permission.
+I’m keeping the source code public so anyone can inspect the security, review the code, or build it for personal use. However, please note that this is a proprietary solo project. You're totally welcome to look under the hood and use it for yourself, but please don't redistribute it, sell it, or post modified versions without checking with me first.
 
 ## Third-Party Services
 
-BeastieBuddy may communicate with external services required for functionality, including the BeastieBuddy API and XIVAPI.
-Those services are independent of this repository and may have their own terms, availability, and limitations.
+BeastieBuddy relies on my search API and XIVAPI. If those are down things will break. Search results for the former, map displays for the latter.
 
 ## Final Fantasy XIV
 
@@ -107,4 +98,4 @@ FINAL FANTASY XIV and related names and assets are trademarks and/or property of
 
 BeastieBuddy is provided without warranty. Use it at your own risk.
 
-The copyright holder is not responsible for problems resulting from the use, modification, or compilation of the software.
+I'm not responsible for any issues, bugs, or problems that happen from using, modifying, or building this software.
