@@ -83,6 +83,7 @@ function buildFilters() {
   buildCol('filter-col-elements', ELEMENTS);
   buildCol('filter-col-class', CLASSIFICATIONS);
   buildCol('filter-col-status', STATUSES);
+  buildCol('filter-col-location', locationFilters);
 }
 
 function setupEventListeners() {
